@@ -1,0 +1,30 @@
+.cabecera {
+  background-color: $colorprimario;
+  height: 92vh;
+  grid-area: cabecera;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: $colorprimario;
+  justify-content: center;
+  align-items: center;
+
+  .cabecera__titulo {
+    color: $colorblanco;
+    margin-top: 0.5rem;
+    font-weight: normal;
+  }
+  .cabecera__subtitulo {
+    color: $colorsecundario;
+    font-size: 1.2rem;
+    font-weight: lighter;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cabecera {
+    height: 8rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+}

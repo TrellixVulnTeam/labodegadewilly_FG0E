@@ -1,0 +1,39 @@
+.slider {
+  grid-area: slider;
+  .carousel-item {
+    height: 36rem;
+    background-size: cover;
+    background-position: center center;
+  }
+  .carousel-item::before {
+    content: "";
+    position: absolute;
+    background: black;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+  }
+
+  .slider__fondotexto {
+    color: $colorblanco;
+    background-color: $colorprimario;
+    width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .slider {
+    grid-area: slider;
+    .carousel-item {
+      height: 28rem;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+}
