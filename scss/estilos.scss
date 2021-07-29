@@ -17,14 +17,14 @@ body {
   font-size: 16px;
   background-color: $colorsecundario;
 }
-
+// @import "navbar";
 @import "grid";
 @import "menu";
 @import "cabecera";
 @import "slider";
 @import "galeriahome";
 @import "tarjetas";
-@import "cardGlass";
+@import "estilocards";
 @import "barralateral";
 @import "footer";
 
@@ -44,7 +44,7 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
-  background-color: yellow;
+  background-color: $colornegro50;
   height: auto;
 }
 
@@ -70,9 +70,7 @@ p {
 #galeriaVinos {
   grid-area: vinos;
 }
-#galeriaVinos2 {
-  grid-area: vinos2;
-}
+
 #galeriaespumantes {
   grid-area: espumantes;
 }

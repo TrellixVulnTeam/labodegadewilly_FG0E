@@ -14,20 +14,19 @@
   }
   .contenedor__vinos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 5px;
     grid-template-areas:
       "cabecera cabecera"
       "menu menu"
-      "barralateral vinos"
-      "barralateral vinos2"
+      "vinos vinos"
       "promociones envios"
       "formasDePago seleccion"
       "footer footer";
   }
   .contenedor__destilados {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 5px;
     grid-template-areas:
       "cabecera cabecera"
@@ -40,7 +39,7 @@
   }
   .contenedor__espumantes {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 5px;
     grid-template-areas:
       "cabecera cabecera"
@@ -72,8 +71,7 @@
     grid-template-areas:
       "cabecera cabecera cabecera cabecera"
       "menu menu menu menu"
-      "barralateral vinos vinos vinos"
-      "barralateral vinos2 vinos2 vinos2"
+      "vinos vinos vinos vinos"
       "promociones envios formasDePago seleccion"
       "footer footer footer footer";
   }

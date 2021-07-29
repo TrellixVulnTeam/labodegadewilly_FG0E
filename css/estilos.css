@@ -23,17 +23,17 @@ body {
     grid-template-areas: "cabecera cabecera" "menu menu" "slider slider" "vinos vinos" "promociones envios" "formasDePago seleccion" "footer footer"; }
   .contenedor__vinos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 5px;
-    grid-template-areas: "cabecera cabecera" "menu menu" "barralateral vinos" "barralateral vinos2" "promociones envios" "formasDePago seleccion" "footer footer"; }
+    grid-template-areas: "cabecera cabecera" "menu menu" "vinos vinos" "promociones envios" "formasDePago seleccion" "footer footer"; }
   .contenedor__destilados {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 5px;
     grid-template-areas: "cabecera cabecera" "menu menu" "destilados destilados" "destilados2 destilados2" "promociones envios" "formasDePago seleccion" "footer footer"; }
   .contenedor__espumantes {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 5px;
     grid-template-areas: "cabecera cabecera" "menu menu" "espumantes espumantes" "espumantes2 espumantes2" "promociones envios" "formasDePago seleccion" "footer footer "; } }
 
@@ -47,7 +47,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 0px;
-    grid-template-areas: "cabecera cabecera cabecera cabecera" "menu menu menu menu" "barralateral vinos vinos vinos" "barralateral vinos2 vinos2 vinos2" "promociones envios formasDePago seleccion" "footer footer footer footer"; }
+    grid-template-areas: "cabecera cabecera cabecera cabecera" "menu menu menu menu" "vinos vinos vinos vinos" "promociones envios formasDePago seleccion" "footer footer footer footer"; }
   .contenedor__destilados {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -61,62 +61,16 @@ body {
 
 /***********Menu************************/
 .menu {
-  height: 3rem;
-  background-color: #000;
-  z-index: 999;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
   grid-area: menu;
-  position: sticky;
-  top: 0; }
-  .menu .menu__escritorio {
-    display: none; }
-  .menu .menu__mobile {
-    display: flex;
-    padding-right: 1rem;
-    flex-direction: row;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center; }
-    .menu .menu__mobile a {
-      margin-right: 1rem;
-      color: #b09e80; }
+  height: 4rem; }
 
-@media screen and (min-width: 768px) {
-  .menu {
-    top: 8rem;
-    background-color: #000;
-    height: 3rem;
-    grid-area: menu;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    .menu .menu__escritorio {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center; }
-      .menu .menu__escritorio a {
-        text-decoration: none;
-        font-size: 1.25rem;
-        margin: 0 0.5rem;
-        padding: 10px;
-        color: #b09e80; }
-      .menu .menu__escritorio a:hover {
-        background-color: #2e4465;
-        color: #fff;
-        border-bottom: solid 2px #b09e80; }
-    .menu .menu__mobile {
-      display: none; } }
-
-@media screen and (min-width: 1200px) {
-  .menu .menu__escritorio {
-    width: 80%;
-    justify-content: space-around; }
-    .menu .menu__escritorio a {
-      padding-left: 2rem;
-      padding-right: 2rem; } }
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0; }
+  .navbar .navbar__titulo {
+    font-size: 1.5rem;
+    border-bottom: 1.5px solid #b09e80;
+    margin-left: 0.5rem; }
 
 .cabecera {
   background-color: #192537;
@@ -141,8 +95,7 @@ body {
   .cabecera {
     height: 8rem;
     position: sticky;
-    top: 0;
-    z-index: 999; } }
+    top: 0; } }
 
 .slider {
   grid-area: slider; }
@@ -215,95 +168,112 @@ body {
     padding-top: 1rem; }
 
 .contenedorflex {
-  grid-area: galeriaHome;
   display: flex;
   justify-content: center;
-  align-content: center;
-  background-color: #222121; }
-  .contenedorflex .contenedor__cards {
+  align-items: center; }
+
+.contenedorcards {
+  grid-area: galeriaHome;
+  position: relative;
+  width: 1280px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .contenedorcards .cards {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    margin: 10px 0; }
-    .contenedorflex .contenedor__cards .card {
-      position: relative;
-      width: 200px;
-      height: 400px;
-      margin: 4px;
-      overflow: hidden;
-      background-color: #192537;
-      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-      border: 1px solid #b09e80;
-      border-radius: 15px;
+    width: 200px;
+    height: 400px;
+    background: linear-gradient(#2e4465, #2e4465 30%, #192537, #192537 30%);
+    border: 1px solid #b09e80;
+    margin: 10px;
+    border-radius: 20px;
+    overflow: hidden; }
+    .contenedorcards .cards .contenido {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       display: flex;
       justify-content: center;
-      align-items: center; }
-      .contenedorflex .contenedor__cards .card .imgBox img {
-        width: 100%;
-        height: auto; }
-      .contenedorflex .contenedor__cards .card .contenido {
-        position: absolute;
-        bottom: -160px;
-        width: 100%;
-        height: 160px;
+      align-items: flex-end;
+      padding-bottom: 5px;
+      transform: translateY(100%);
+      transition: 0.5s; }
+      .contenedorcards .cards .contenido .detalles {
         display: flex;
         justify-content: center;
-        align-items: center;
-        z-index: 10;
         flex-direction: column;
-        backdrop-filter: blur(15px);
-        box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
-        border: 1px solid #192537;
-        transition: bottom 0.5s; }
-        .contenedorflex .contenedor__cards .card .contenido .contenido__texto h3 {
-          color: brown;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          font-weight: 500;
-          font-size: 18px;
-          text-align: center;
-          margin: 20px 0 15px;
-          line-height: 1.1em;
-          transition: 0.5s;
-          opacity: 0;
-          transform: translateY(-20px);
-          transition: bottom 0.5s;
-          transition-delay: 0.6s; }
-          .contenedorflex .contenedor__cards .card .contenido .contenido__texto h3 span {
-            font-weight: 300;
-            font-size: 12px;
-            text-transform: initial; }
-        .contenedorflex .contenedor__cards .card .contenido .lista {
+        text-align: center; }
+        .contenedorcards .cards .contenido .detalles .iconos {
           position: relative;
-          bottom: 10px;
-          display: flex; }
-          .contenedorflex .contenedor__cards .card .contenido .lista li {
-            padding-left: 0rem !important;
+          display: flex;
+          justify-content: center;
+          margin-top: 5px; }
+          .contenedorcards .cards .contenido .detalles .iconos li {
             list-style: none;
-            margin: 0 10px;
-            transform: translateY(40px);
-            transition: 0.5s;
-            opacity: 0;
-            transition-delay: calc(0.2s * var(--i)); }
-            .contenedorflex .contenedor__cards .card .contenido .lista li a {
-              text-align: center;
-              color: lavender; }
-  .contenedorflex .contenedor__cards .card:hover .contenido {
-    bottom: 0px; }
-  .contenedorflex .contenedor__cards .card:hover .contenido .contenido__texto h3 {
-    opacity: 1;
-    transform: translateY(0px); }
-  .contenedorflex .contenedor__cards .card:hover .contenido .lista li {
-    transform: translateY(0px);
-    opacity: 1; }
+            margin: 4px; }
+            .contenedorcards .cards .contenido .detalles .iconos li a {
+              width: 40px;
+              height: 40px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: #b09e80;
+              border-radius: 50%;
+              font-size: 1.2rem;
+              color: #192537;
+              text-decoration: none;
+              transition: 0.5s; }
+        .contenedorcards .cards .contenido .detalles h2 {
+          color: white;
+          font-size: 1.2em;
+          font-weight: 500; }
+          .contenedorcards .cards .contenido .detalles h2 span {
+            font-size: 0.8em;
+            font-weight: 400;
+            color: #2196f3; }
+    .contenedorcards .cards .imgBx {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: 0.4s;
+      z-index: 1000;
+      border-radius: 20px;
+      overflow: hidden;
+      transform-origin: top; }
+      .contenedorcards .cards .imgBx img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+
+.contenedorcards .cards:hover .imgBx {
+  transform: translateY(30px) scale(0.5); }
+
+.contenedorcards .cards:hover .contenido {
+  transform: translateY(0%); }
+
+.iconos li a:hover {
+  transform: rotate(360deg);
+  background-color: darkmagenta; }
 
 .barraLateral {
-  grid-area: barralateral;
-  background-color: blue;
-  display: flex;
-  flex-direction: column; }
+  display: none; }
+
+@media screen and (min-width: 1200px) {
+  .barraLateral {
+    display: block;
+    grid-area: barralateral;
+    background-color: blue;
+    display: flex;
+    flex-direction: column; } }
 
 .footer {
   height: 4rem;
@@ -372,7 +342,7 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
-  background-color: yellow;
+  background-color: #282829;
   height: auto; }
 
 .promociones {
@@ -397,9 +367,6 @@ p {
 
 #galeriaVinos {
   grid-area: vinos; }
-
-#galeriaVinos2 {
-  grid-area: vinos2; }
 
 #galeriaespumantes {
   grid-area: espumantes; }
