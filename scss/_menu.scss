@@ -1,15 +1,72 @@
-/***********Menu************************/
-.menu {
-  grid-area: menu;
-  height: 4rem;
-}
-
 .navbar {
+  grid-area: menu;
   padding-top: 0;
   padding-bottom: 0;
+  overflow-y: hidden;
+  .nav-item {
+    font-size: 0.8rem;
+  }
+  .navbar-toggler {
+    border: 0;
+    padding: 0px;
+    color: $colorblanco;
+  }
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+  .navbar-brand {
+    margin-right: 0.25rem;
+    img {
+      width: 40px;
+      height: 40px;
+    }
+    .icono {
+      font-size: 1.2rem;
+      color: $colorsecundario;
+    }
+    .texto {
+      position: relative;
+      top: -12px;
+      left: 3px;
+      background-color: red;
+      color: $colorblanco;
+      margin-left: -1rem;
+      padding: 0.5px 2px;
+      border-radius: 5px;
+      font-size: 0.7rem;
+    }
+  }
+
+  .navbar__a a {
+    background-color: $colorprimario;
+    margin: 0 0.25rem;
+    padding: 0.5rem;
+  }
+
   .navbar__titulo {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     border-bottom: 1.5px solid $colorsecundario;
     margin-left: 0.5rem;
+  }
+}
+
+.navbar-nav a:hover {
+  background-color: $colorprimarioclaro;
+  border-bottom: solid 1px $colorsecundario;
+}
+
+.hover a:hover {
+  background-color: $colorprimarioclaro;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar {
+    .nav-item {
+      font-size: 1rem;
+    }
   }
 }

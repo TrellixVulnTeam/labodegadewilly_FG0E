@@ -1,30 +1,31 @@
-.formatoTarjeta {
-  display: flex;
-  flex-direction: column;
-  height: 80%;
-  width: 80%;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  background-color: $colorprimarioclaro;
-  color: $colorsecundario;
-  border-radius: 0 2rem 0 2rem;
-  transition: all 0.3s ease-in-out;
+.tarjetas {
+  background-color: $colornegro50;
+  .card {
+    background-color: inherit;
+    border: 0;
+    border-radius: 0;
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+  .tarjeta {
+    .card-img-overlay {
+      h5 {
+        font-size: 2rem;
+        span {
+          border-bottom: solid 1px $colorsecundario;
+        }
+      }
+    }
+  }
 }
 
-.formatoTarjeta:hover {
-  background-image: linear-gradient(#504737, #b09e80, #504737);
-  border-radius: 2rem 0 2rem 0;
-  p {
-    color: $colorprimario;
-    font-weight: normal;
-  }
-  h2 {
-    color: $colorprimario;
-    padding-top: 1rem;
-  }
-}
-@media screen and (min-width: 768px) {
-}
-@media screen and (min-width: 1200px) {
+.tarjeta::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $colornegro50;
+  opacity: 50%;
 }

@@ -4,13 +4,14 @@
     grid-template-columns: repeat(2, 1fr);
     /* grid-template-rows: 8rem 4rem auto auto auto 4rem; */
     grid-template-areas:
-      "cabecera cabecera"
-      "menu menu"
-      "slider slider"
-      "vinos vinos"
       "promociones envios"
-      "formasDePago seleccion"
-      "footer footer";
+      "formasDePago seleccion";
+  }
+  .contenedor__productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-template-areas: "galeriaproductoshome galeriaproductoshome";
   }
   .contenedor__vinos {
     display: grid;
@@ -56,13 +57,13 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 5px;
-    grid-template-areas:
-      "cabecera cabecera cabecera cabecera"
-      "menu menu menu menu"
-      "slider slider slider slider"
-      "vinos vinos vinos vinos"
-      "promociones envios formasDePago seleccion"
-      "footer footer footer footer";
+    grid-template-areas: "promociones envios formasDePago seleccion";
+  }
+  .contenedor__productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    grid-template-areas: "galeriaproductoshome galeriaproductoshome galeriaproductoshome galeriaproductoshome";
   }
   .contenedor__vinos {
     display: grid;

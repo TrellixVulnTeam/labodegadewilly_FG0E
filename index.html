@@ -13,8 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/9181e62ac5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="css/estilos.css">
   <meta name="description"
     content="Sitio de venta online de vinos, espumantes y destilados, con envios a domicilio gratuito">
@@ -24,223 +22,203 @@
   <title>La Bodega de Willy - Venta de Vinos - Destilados - Espumantes</title>
 </head>
 
-<body>
-  <div class="contenedor">
-    <header id="inicio" class="cabecera">
-      <img src="imagenes/logo.svg" class="animate__animated animate__fadeIn animate__delay-1s" alt="">
-      <h2 class="cabecera__titulo animate__animated animate__fadeIn animate__delay-2s ">la bodega de willy</h2>
-      <h3 class="cabecera__subtitulo animate__animated animate__fadeIn animate__delay-3s ">Vinos · Espumantes ·
-        Destilados</h3>
-    </header>
+<body class="container-fluid">
+  <header>
+    <div class="row header align-items-center">
+      <div class="col-6 col-md-3 order-1 order-md-0 text-start">
+        <span class="header__textos text-uppercase">Envio Gratis - Rqta/Avda</span>
+      </div>
+      <div class="col-12 col-md-6 order-0 order-md-1 text-center">
+        <span class="header__textos  ">Beber con moderación - Prohibida su venta a menores de 18
+          años.</span>
+      </div>
+      <div class="col-6 col-md-3 order-2 order-md-2 text-end">
+        <i class="bi bi-instagram mx-1"></i>
+        <i class="bi bi-facebook mx-1"></i>
+        <i class="bi bi-whatsapp mx-1 "></i>
+      </div>
 
-    <nav id="menu" class="navbar navbar-expand-sm navbar-dark bg-dark menu sticky-top">
-      <div class="container-fluid">
-        <a class="navbar-brand align-content-end " href="#">
-          <img src="imagenes/logo2.svg" alt="" width="50" height="60" class="d-inline-block align-middle"><span
-            class="navbar__titulo">La
-            bodega de
-            Willy</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="vinos.html">Vinos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="espumantes.html">Espumantes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="destilados.html">Destilados</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav  ms-auto">
-            <button class="btn bg-primary text-white ">Su Carro</button>
-          </ul>
+    </div>
+  </header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" id="menu">
+    <div class="container-fluid justify-content-between">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="imagenes/logo2.svg" alt="" width="30" height="24"><span class="navbar__titulo">La Bodega de
+          Willy</span>
+      </a>
+      <div class="d-md-inline-flex order-md-2 hover ">
+        <a class="navbar-brand d-none d-md-block" href="#">
+          <i class="bi bi-search icono px-1"></i></span>
+        </a>
+        <a class="navbar-brand d-none d-md-block " href="#">
+          <i class="bi-person-circle icono px-1"></i></span>
+        </a>
+        <a class="navbar-brand" href="#">
+          <i class="bi bi-cart3 icono px-1"></i></span>
+        </a>
+        <a class="navbar-brand" href="#">
+          <span class="texto">+2</span>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vinos.html">Vinos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="espumantes.html">Espumantes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="destilados.html">Destilados</a>
+          </li>
+        </ul>
+      </div>
+
+  </nav>
+
+  <section id="video" class=" banner">
+    <video autoplay muted loop>
+      <source src="imagenes/videos/video_vino_1.mp4" type="video/mp4">
+    </video>
+    <div class="contenido_video">
+      <h2>Llevamos las mejores bebidas <br><span>directo a tu casa.</span> </h2>
+      <h3>Vinos - Espumantes - Destilados</h3>
+
+    </div>
+  </section>
+  <section class="container-fluid tarjetas pt-1">
+    <div class="row m-auto">
+      <div class="col-12 col-sm-6 col-lg-3 card text-white tarjeta my-1">
+        <img src="/imagenes/tarjeta_vino.jpg" class="card-img img-fluid" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title ms-2 mt-5"><span>Vinos</span></h5>
+          <a href="#" class="btn btn-primary ms-2 mt-2 text-lg-center">Ver Vinos </a>
         </div>
       </div>
-    </nav>
-
-    <!-- <nav id="menu" class="menu">
-      <div class="menu__mobile">
-        <a href="#"><i class="fas fa-bars fa-2x"></i></a>
+      <div class=" col-12 col-sm-6 col-lg-3 card text-white tarjeta my-1">
+        <img src="/imagenes/tarjetas_espumante.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title ms-2 mt-5"><span>Espumantes</span></h5>
+          <a href="#" class="btn btn-primary ms-2 mt-2 text-lg-center">Ver Espumantes </a>
+        </div>
       </div>
-      <div class="menu__escritorio">
-        <a href="index.html">Inicio</a>
-        <a href="vinos.html">Vinos</a>
-        <a href="espumantes.html">Espumantes</a>
-        <a href="destilados.html">Destilados</a>
-
+      <div class="col-12 col-sm-6 col-lg-3 card text-white tarjeta my-1">
+        <img src="/imagenes/tarjeta_destilados.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title ms-2 mt-5"><span>Destilados</span></h5>
+          <a href="#" class="btn btn-primary ms-2 mt-2 text-lg-center">Ver Destilados </a>
+        </div>
       </div>
-    </nav> -->
-    <section id="slider" class="slider">
-      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-            aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+      <div class=" col-12 col-sm-6 col-lg-3 card text-white tarjeta mt-1 my-2">
+        <img src="/imagenes/tarjeta_whiskys.jpg" class="card-img" alt="...">
+        <div class="card-img-overlay">
+          <h5 class="card-title ms-2 mt-5"><span>Whiskys</span></h5>
+          <a href="#" class="btn btn-primary ms-2 mt-2 text-lg-center">Ver Whiskys </a>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active" style="background-image: url(imagenes/imagen1.png);">
-            <!-- <img src="imagenes/imagen2.png" class="d-block w-100" alt="..."> -->
-            <div class="carousel-caption d-none d-md-block">
-              <div class="slider__fondotexto">
-                <h5>Seccion de Vinos</h5>
-                <p>Los mejores representantes de Bodega Septima.</p>
-              </div>
-
-            </div>
-          </div>
-          <div class="carousel-item" style="background-image: url(imagenes/imagen2.png);">
-            <!-- <img src="imagenes/imagen1.png" class="d-block w-100" alt="..."> -->
-            <div class="carousel-caption d-none d-md-block">
-              <div class="slider__fondotexto">
-                <h5>Seccion de Espumantes</h5>
-                <p>Toda la gama de espumantes de "Maria Codorniu"</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item" style="background-image: url(imagenes/imagen3.png);">
-            <!-- <img src="imagenes/imagen3.png" class="d-block w-100" alt="..."> -->
-            <div class="carousel-caption d-none d-md-block">
-              <div class="slider__fondotexto">
-                <h5>Seccion de Destilados</h5>
-                <p>Toda la gama de licores "3 Plumas".</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-    </section>
-    <section id="galeriaVinos" class="galeriaHome">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 m-3">
-        <div class="col">
-          <div class="card h-100">
-            <img src="imagenes/vinos/Vino_Tinto_1.jpg" class="card-img-top mx-auto" alt="Vino 1">
-            <div class="card-body">
-              <h5 class="card-title text-center galeriaHome__titulo">SÉPTIMA 10 BARRICAS</h5>
-              <h6 class="card-title text-center galeriaHome__subtitulo">Cabernet</h6>
-              <p class="card-text bg-light text-center galeriaHome__descripcion">Aluvial poco profundo – Franco a franco
-                arcilloso con presencia
-                de canto
-                rodado en
-                profundidad.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 ">
-            <img src="imagenes/vinos/Vino_tinto_2.jpg" class="card-img-top mx-auto" alt="Vino 2">
-            <div class="card-body">
-              <h5 class="card-title text-center galeriaHome__titulo">SÉPTIMA 10 GRAN RESERVA</h5>
-              <h6 class="card-title text-center galeriaHome__subtitulo">Malbec</h6>
-              <p class="card-text bg-light text-center galeriaHome__descripcion">Aluvial poco profundo – Franco a franco
-                arcilloso con presencia
-                de canto rodado en
-                profundidad.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 ">
-            <img src="imagenes/vinos/Vino_Tinto_3.png" class="card-img-top mx-auto" alt="Vino 3">
-            <div class="card-body">
-              <h5 class="card-title text-center galeriaHome__titulo">SÉPTIMA 10 RESERVA</h5>
-              <h6 class="card-title text-center galeriaHome__subtitulo">Cabernet Franc</h6>
-              <p class="card-text bg-light text-center galeriaHome__descripcion">Franco arenoso, con presencia de
-                piedras (canto rodado)
-                cubiertas con
-                Calcáreo en
-                todo el perfil</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 ">
-            <img src="imagenes/vinos/Vino_Tinto_4.jpg" class="card-img-top mx-auto" alt="Vino 3">
-            <div class="card-body">
-              <h5 class="card-title text-center galeriaHome__titulo">SÉPTIMA 10 ESPECIAL</h5>
-              <h6 class="card-title text-center galeriaHome__subtitulo">Tannat</h6>
-              <p class="card-text bg-light text-center galeriaHome__descripcion">Aluvial poco profundo – Franco a franco
-                arcilloso con presencia
-                de canto rodado en
-                profundidad.</p>
-            </div>
+
+  </section>
+
+  <section id="galeriaVinos" class="galeriaHome">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 m-3">
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagenes/vinos/Vino_Tinto_1.jpg" class="card-img-top mx-auto" alt="Vino 1">
+          <div class="card-body">
+            <h5 class="card-title text-center galeriaHome__titulo">SÉPTIMA 10 BARRICAS</h5>
+            <h6 class="card-title text-center galeriaHome__subtitulo">Cabernet</h6>
+            <p class="card-text bg-light text-center galeriaHome__descripcion">Aluvial poco profundo – Franco a franco
+              arcilloso con presencia
+              de canto
+              rodado en
+              profundidad.</p>
           </div>
         </div>
       </div>
-
-    </section>
-    <section id="promociones" class="promociones">
-      <div class="formatoTarjeta">
-        <p><i class="fas fa-tags fa-2x"></i></p>
-        <h3>Promociones</i></h3>
-        <p>Comprando 3 Unidades</p>
-      </div>
-    </section>
-    <section id="envios" class="envios">
-      <div class="formatoTarjeta">
-        <p><i class="fas fa-shipping-fast fa-2x"></i></p>
-        <h3>Envio gratis</i></h3>
-        <p>Reconquista y Avellaneda</p>
-      </div>
-    </section>
-    <section id="formasDePago" class="formasDePago">
-      <div class="formatoTarjeta">
-        <p><i class="far fa-credit-card fa-2x"></i></p>
-        <h3>Pagos</i></h3>
-        <p>Efectivo - Transferencia</p>
-      </div>
-    </section>
-    <section id="seleccion" class="seleccion">
-      <div class="formatoTarjeta">
-        <p><i class="fas fa-glass-cheers fa-2x"></i></p>
-        <h3>hacete socio</i></h3>
-        <p>Suma beneficios</p>
-      </div>
-    </section>
-    <footer id="footer" class="footer">
-      <div class="footer__diseñadoPor">
-        <p class="parrafo-1">Diseñado por:</p>
-        <p class="parrafo-2">Nestor Gomez</p>
-      </div>
-      <div class="footer__redes">
-        <div>
-          <p><i class="fab fa-instagram fa-2x fdo--instagram">
-            </i></p>
+      <div class="col">
+        <div class="card h-100 ">
+          <img src="imagenes/vinos/Vino_tinto_2.jpg" class="card-img-top mx-auto" alt="Vino 2">
+          <div class="card-body">
+            <h5 class="card-title text-center galeriaHome__titulo">SÉPTIMA 10 GRAN RESERVA</h5>
+            <h6 class="card-title text-center galeriaHome__subtitulo">Malbec</h6>
+            <p class="card-text bg-light text-center galeriaHome__descripcion">Aluvial poco profundo – Franco a franco
+              arcilloso con presencia
+              de canto rodado en
+              profundidad.</p>
+          </div>
         </div>
-        <div>
-          <p><i class="fab fa-whatsapp fa-2x fdo--whatsapp"></i></p>
-        </div>
-        <div>
-          <p><i class="fab fa-facebook-f fa-2x fdo--facebook"></i></p>
-        </div>
-
-
       </div>
+      <div class="col">
+        <div class="card h-100 ">
+          <img src="imagenes/vinos/Vino_Tinto_3.png" class="card-img-top mx-auto" alt="Vino 3">
+          <div class="card-body">
+            <h5 class="card-title text-center galeriaHome__titulo">SÉPTIMA 10 RESERVA</h5>
+            <h6 class="card-title text-center galeriaHome__subtitulo">Cabernet Franc</h6>
+            <p class="card-text bg-light text-center galeriaHome__descripcion">Franco arenoso, con presencia de
+              piedras (canto rodado)
+              cubiertas con
+              Calcáreo en
+              todo el perfil</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100 ">
+          <img src="imagenes/vinos/Vino_Tinto_4.jpg" class="card-img-top mx-auto" alt="Vino 3">
+          <div class="card-body">
+            <h5 class="card-title text-center galeriaHome__titulo">SÉPTIMA 10 ESPECIAL</h5>
+            <h6 class="card-title text-center galeriaHome__subtitulo">Tannat</h6>
+            <p class="card-text bg-light text-center galeriaHome__descripcion">Aluvial poco profundo – Franco a franco
+              arcilloso con presencia
+              de canto rodado en
+              profundidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    </footer>
+  </section>
+
+
+
+  </section>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  <footer id="footer" class="footer">
+    <div class="footer__diseñadoPor">
+      <p class="parrafo-1">Diseñado por:</p>
+      <p class="parrafo-2">Nestor Gomez</p>
+    </div>
+    <div class="footer__redes">
+      <div>
+        <p><i class="fab fa-instagram fa-2x fdo--instagram">
+          </i></p>
+      </div>
+      <div>
+        <p><i class="fab fa-whatsapp fa-2x fdo--whatsapp"></i></p>
+      </div>
+      <div>
+        <p><i class="fab fa-facebook-f fa-2x fdo--facebook"></i></p>
+      </div>
+
+
+    </div>
+
+  </footer>
+
+  </div>
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
 
 </body>
