@@ -1,0 +1,21 @@
+.header {
+  grid-area: cabecera;
+  font-family: "Roboto", sans-serif;
+  background-color: $colorgrisclaro;
+  color: $colorsecundario;
+  .header__textos {
+    font-size: 10.5px;
+  }
+}
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    .header__textos {
+      font-size: 1rem;
+    }
+  }
+}

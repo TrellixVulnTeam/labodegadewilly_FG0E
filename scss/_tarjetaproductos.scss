@@ -1,0 +1,20 @@
+.contenedor__productos {
+  padding-top: 1rem;
+  grid-area: galeriaproductoshome;
+
+  .tarjeta {
+    position: relative;
+    height: 300px;
+    width: 350px;
+    background-color: red;
+    .tarjetas_img {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    .tarjetas_textos {
+      position: absolute;
+      text-align: center;
+    }
+  }
+}

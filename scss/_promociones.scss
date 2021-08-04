@@ -1,0 +1,29 @@
+.formatoTarjeta {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorprimarioclaro;
+  color: $colorsecundario;
+  border-radius: 0 2rem 0 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.formatoTarjeta:hover {
+  background-image: linear-gradient(#504737, #b09e80, #504737);
+  border-radius: 2rem 0 2rem 0;
+  p {
+    color: $colorprimario;
+    font-weight: normal;
+  }
+  h3 {
+    color: $colorprimario;
+  }
+}
+@media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1200px) {
+}
