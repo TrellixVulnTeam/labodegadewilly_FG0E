@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/9181e62ac5.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="css/jarallax.css">
   <link rel="stylesheet" href="css/estilos.css">
   <meta name="description"
     content="Sitio de venta online de vinos, espumantes y destilados, con envios a domicilio gratuito">
@@ -22,223 +23,300 @@
   <title>La Bodega de Willy - Venta de Vinos - Destilados - Espumantes</title>
 </head>
 
-<body class="container-fluid">
-  <header>
-    <div class="row header align-items-center">
-      <div class="col-6 col-md-3 order-1 order-md-0 text-start">
-        <span class="header__textos text-uppercase">Envio Gratis - Rqta/Avda</span>
-      </div>
-      <div class="col-12 col-md-6 order-0 order-md-1 text-center">
-        <span class="header__textos  ">Beber con moderación - Prohibida su venta a menores de 18
-          años.</span>
-      </div>
-      <div class="col-6 col-md-3 order-2 order-md-2 text-end">
-        <i class="bi bi-instagram mx-1"></i>
-        <i class="bi bi-facebook mx-1"></i>
-        <i class="bi bi-whatsapp mx-1 "></i>
-      </div>
-
-    </div>
-  </header>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top" id="menu">
-    <div class="container-fluid justify-content-between">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-        <img src="imagenes/logo2.svg" alt="" width="30" height="24"><span class="navbar__titulo">La Bodega de
-          Willy</span>
-      </a>
-      <div class="d-md-inline-flex order-md-2 hover ">
-        <a class="navbar-brand d-none d-md-block" href="#">
-          <i class="bi bi-search icono px-1"></i></span>
-        </a>
-        <a class="navbar-brand d-none d-md-block " href="#">
-          <i class="bi-person-circle icono px-1"></i></span>
-        </a>
-        <a class="navbar-brand" href="#">
-          <i class="bi bi-cart3 icono px-1"></i></span>
-        </a>
-        <a class="navbar-brand" href="#">
-          <span class="texto">+2</span>
-        </a>
-      </div>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="vinos.html">Vinos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="espumantes.html">Espumantes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="destilados.html">Destilados</a>
-          </li>
-        </ul>
-      </div>
-
-  </nav>
-
-  <section id="video" class=" banner">
-    <video autoplay muted loop>
-      <source src="imagenes/videos/video_vino_1.mp4" type="video/mp4">
-    </video>
-    <div class="contenido_video">
-      <h2>Llevamos las mejores bebidas <br><span>directo a tu casa.</span> </h2>
-      <h3>Vinos - Espumantes - Destilados</h3>
-
-    </div>
-  </section>
-  <section class="container-fluid tarjetas pt-1">
-    <div class="row m-auto">
-      <div class="col-12 col-sm-6 col-lg-3 card text-white tarjeta my-1">
-        <img src="imagenes/tarjeta_vino.jpg" class="card-img img-fluid" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title ms-2 mt-5"><span>Vinos</span></h5>
-          <a href="#" class="btn btn-primary ms-2 mt-2 text-lg-center">Ver Vinos </a>
+<body>
+  <div lass="contenedor__home">
+    <header class="header m-1" id="header">
+      <div class="container-fluid p-2">
+        <div class="row d-flex align-items-center">
+          <div class="col-6 col-md-3 order-1 order-md-0 text-start ps-sm-4">
+            <span class="header__textos text-uppercase">Envio Gratis - Rqta/Avda</span>
+          </div>
+          <div class="col-12 col-md-6 order-0 order-md-1 text-center">
+            <span class="header__textos  ">Beber con moderación - Prohibida su venta a menores de 18 años</span>
+          </div>
+          <div class="col-6 col-md-3 order-2 order-md-2 text-end pe-sm-4">
+            <i class="bi bi-instagram mx-1"></i>
+            <i class="bi bi-facebook  mx-1"></i>
+            <i class="bi bi-whatsapp  mx-1 "></i>
+          </div>
         </div>
-      </div>
-      <div class=" col-12 col-sm-6 col-lg-3 card text-white tarjeta my-1">
-        <img src="imagenes/tarjeta_espumante.jpg" class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title ms-2 mt-5"><span>Espumantes</span></h5>
-          <a href="#" class="btn btn-primary ms-2 mt-2 text-lg-center">Ver Espumantes </a>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-lg-3 card text-white tarjeta my-1">
-        <img src="imagenes/tarjeta_destilados.jpg" class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title ms-2 mt-5"><span>Destilados</span></h5>
-          <a href="#" class="btn btn-primary ms-2 mt-2 text-lg-center">Ver Destilados </a>
-        </div>
-      </div>
-      <div class=" col-12 col-sm-6 col-lg-3 card text-white tarjeta mt-1 my-2">
-        <img src="imagenes/tarjeta_whiskys.jpg" class="card-img" alt="...">
-        <div class="card-img-overlay">
-          <h5 class="card-title ms-2 mt-5"><span>Whiskys</span></h5>
-          <a href="#" class="btn btn-primary ms-2 mt-2 text-lg-center">Ver Whiskys </a>
-        </div>
-      </div>
 
-  </section>
 
-  <section id="galeriaVinos" class="galeriaHome">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 m-3">
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagenes/vinos/Vino_Tinto_1.jpg" class="card-img-top mx-auto" alt="Vino 1">
-          <div class="card-body">
-            <h5 class="card-title text-center galeriaHome__titulo">SÉPTIMA 10 BARRICAS</h5>
-            <h6 class="card-title text-center galeriaHome__subtitulo">Cabernet</h6>
-            <p class="card-text bg-light text-center galeriaHome__descripcion">Aluvial poco profundo – Franco a franco
-              arcilloso con presencia
-              de canto
-              rodado en
-              profundidad.</p>
+
+    </header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top ms-1 " id="menu">
+      <div class="container-fluid justify-content-between">
+        <button class="navbar-toggler ps-2" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand ps-2" href="index.html">
+          <img src="imagenes/logo2.svg" alt="" width="30" height="24"><span class="navbar__titulo">La Bodega de
+            Willy</span>
+        </a>
+        <div class="d-md-inline-flex order-md-2 hover pe-2 pe-sm-4">
+          <a class="navbar-brand d-none d-md-block" href="#">
+            <i class="bi bi-search icono px-1"></i></span>
+          </a>
+          <a class="navbar-brand d-none d-md-block " href="#">
+            <i class="bi-person-circle icono px-1"></i></span>
+          </a>
+          <a class="navbar-brand" href="#">
+            <i class="bi bi-cart3 icono px-1"></i></span>
+          </a>
+          <a class="navbar-brand" href="#">
+            <span class="texto">+2</span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vinos.html">Vinos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="espumantes.html">Espumantes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="destilados.html">Destilados</a>
+            </li>
+          </ul>
+        </div>
+
+    </nav>
+
+    <section id="video" class="banner">
+      <video autoplay muted loop>
+        <source src="imagenes/videos/video_vino_1.mp4" type="video/mp4">
+      </video>
+      <div class="contenido_video">
+        <h2>Llevamos las mejores bebidas <br><span>directo a tu casa.</span> </h2>
+        <h3>Vinos - Espumantes - Destilados</h3>
+
+      </div>
+    </section>
+
+    <section class="container-fluid" id="productos">
+
+      <div class="row  mb-1 justify-content-center  justify-content-sm-between tarjetas">
+        <div class="row pt-2 pb-1 row-cols-1 row-cols-md-3 ">
+          <div class="col">
+            <div class="card ">
+              <img src="imagenes/tarjetas/tarjetar-vinos1.jpg" class="img-fluid" alt="Ir a sección de Vinos">
+              <div class="card-img-overlay ">
+                <h5 class="ms-2 "><span>Vinos</span></h5>
+                <a href="vinos.html" class="ms-2 mt-3"><span class="btn btn-primary mt-1 ps-3 pe-3">Ver Vinos</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mt-2 mt-sm-0 mb-2 mb-sm-0 ">
+              <img src="imagenes/tarjetas/tarjeta-espumantes1.jpg" class="img-fluid" alt="Ir a sección de Espumantes">
+              <div class="card-img-overlay ">
+                <h5 class="ms-2 "><span>Espumantes</span></h5>
+                <a href="espumantes.html" class="ms-2 mt-3"><span class="btn btn-primary mt-1 ps-3 pe-3">Ver
+                    Espumantes</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card ">
+              <img src="imagenes/tarjetas/tarjeta-destilados1.jpg" class="img-fluid" alt="Ir a Sección de Destilados">
+              <div class="card-img-overlay ">
+                <h5 class="ms-2 "><span>Destilados</span></h5>
+                <a href="destilados.html" class="ms-2 mt-3"><span class="btn btn-primary mt-1 ps-3 pe-3">Ver
+                    Destilados</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="GaleriaPromoIndex" class="contenedorflex1 mb-1">
+      <h3 class="text-center">Promociones Destacadas</h3>
+      <div class="ContenedorPromosIndex">
+        <div class="cards">
+          <div class="descuento">
+            <p><span>34%</span></p>
+          </div>
+          <div class="imgBx">
+            <img src="imagenes/vinos/promo-vino-1.jpg" alt="Tinto Malbec Los Alamos 750ml"
+              title="Tinto Malbec Los Alamos 750ml">
+          </div>
+          <div class="nombreyprecio ">
+            <h5><span class="precioviejo">$4.815</span><span>-</span> <span class="preciocondescuento">$3.176 - x6
+                Botellas</span>
+            </h5>
+            <h5 class="tipodevino">Blanco - Chardonnay - 750ml</h5>
+            <h5 class="fondo">Vino Finca La Linda</h5>
+          </div>
+          <div class="contenido">
+            <div class="detalles">
+              <ul class="iconos">
+                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
+                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
+                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="descuento">
+            <p><span>21%</span></p>
+          </div>
+          <div class="imgBx">
+            <img src="imagenes/espumantes/promo-espumante-1.jpg" title="Blanco Chardonnay Septima 750ml"
+              alt="Blanco Chardonnay Septima 750ml">
+          </div>
+          <div class="nombreyprecio ">
+            <h5><span class="precioviejo">$6.240</span><span>-</span> <span class="preciocondescuento">$4.900 - x24
+                Botellas</span></h5>
+            <h5 class="tipodevino">Extra Brut - 187cc</h5>
+            <h5 class="fondo">Champagne Mumm</h5>
+          </div>
+          <div class="contenido">
+            <div class="detalles">
+              <ul class="iconos">
+                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
+                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
+                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="descuento">
+            <p><span>10%</span></p>
+          </div>
+          <div class="imgBx">
+            <img src="imagenes/destilados/promo-destilados-1.jpg" title=" Tinto Malbec La Linda 750ml"
+              alt="Tinto Malbec La Linda 750ml">
+          </div>
+          <div class="nombreyprecio ">
+            <h5><span class="precioviejo">$6.000</span><span>-</span> <span class="preciocondescuento">$5.400</span>
+            </h5>
+            <h5 class="tipodevino">Pack X 3 (Macedonio-London-Dry)</h5>
+            <h5 class="fondo">Gin Heraclito </h5>
+          </div>
+          <div class="contenido">
+            <div class="detalles">
+              <ul class="iconos">
+                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
+                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
+                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="descuento">
+          </div>
+          <div class="imgBx">
+            <img src="imagenes/destilados/Promo-Licor-1.jpg" alt="Tinto Malbec Trumpeter 750ml"
+              title="Tinto Malbec Trumpeter 750ml">
+          </div>
+          <div class="nombreyprecio ">
+            <h5><span class="preciocondescuento">$4.500</span></h5>
+            <h5 class="tipodevino">Licor Bailys + Licor Tambo Dulce de Leche</h5>
+            <h5 class="fondo">Bailys + Tambo</h5>
+          </div>
+          <div class="contenido">
+            <div class="detalles">
+              <ul class="iconos">
+                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
+                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
+                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="telollevamos" class="jarallax " data-jarallax data-speed="0.6">
+      <picture class="jarallax-img">
+        <source media="(min-width:1200px)" srcset="imagenes/fondos/fondo-1.jpg">
+        <source media="(min-width:768px)" srcset="imagenes/fondos/fondo1400-800.jpg">
+        <img srcset="imagenes/fondos/fondo1-900x600.jpg" alt="" class="w-100">
+      </picture>
+      <picture>
+        im
+      </picture>
+      <div class="container">
+        <div class="row justify-content-center ">
+          <div class="col-12 text-white telollevamos text-center">
+            <h3 class="mt-4 pt-4"> <span>DONDE ESTES, TE LO LLEVAMOS</span> </h3>
+            <p class="mt-4">Reconquista - Avellaneda <BR class=""> <span>envios sin cargo</span> </p>
+            <a href="#" class="btn btn-primary ">VINOS</a>
+            <a href="#" class="btn btn-primary ">ESPUMANTES</a>
+            <a href="#" class="btn btn-primary mt-2 m-sm-0">DESTILADOS</a>
+            <br>
+            <div class="mb-1 mt-4 pt-sm-4 pt-md-3">
+              <img src="imagenes/logos/logo-visa.png" alt="Tarjetas de Débito" title="Tarjetas de Débito">
+              <img src="imagenes/logos/logo-billetera.png" alt="Billetera Santa Fe" title="Billetera Santa Fe">
+              <img src="imagenes/logos/logo-transferencia.png" alt="Transferencia Bancaria"
+                title="Transferencia Bancaria">
+              <img src="imagenes/logos/logo-mercadopago.png" alt="Mercado Pago" title="Mercado Pago">
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container-fluid footer ">
+        <div class="row">
+          <div class="col-12 logo text-center mx-auto">
+            <img src="imagenes/logo2.svg" alt="">
+            <h3 class="pt-2"><span>La bodega de WIlly</span></h3>
+          </div>
+        </div>
+        <div class="row text-center mx-auto ">
+          <p class="textos__footer text-center ">Beber con moderación - Prohibida su venta a menores de 18 años</p>
+        </div>
+        <div class="row text-center justify-content-center ">
+          <div class="col-12 col-sm-3 offset-sm-auto">
+            <p>TERMINOS Y CONDICIONES</p>
+          </div>
+          <div class="col-12 col-sm-3 border-end border-start ">
+            <p>POLITICA DE PRIVACIDAD</p>
+          </div>
+          <div class="col-12 col-sm-3 ">
+            <p>FORMULARIO DE CONTACTO</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-auto ">
+            <h3 class="pt-2"><span class="textos__footer ">Telefono:+543482-234567</span></h3>
+          </div>
+          <div class="col-auto ">
+            <h3 class="pt-2"><span class="textos__footer ">Email: labodegadewilly@gmail.com</span></h3>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-2">
+          <div class="col-auto ">
+            <i class="bi bi-instagram mx-1"></i>
+            <i class="bi bi-facebook mx-1"></i>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card h-100 ">
-          <img src="imagenes/vinos/Vino_tinto_2.jpg" class="card-img-top mx-auto" alt="Vino 2">
-          <div class="card-body">
-            <h5 class="card-title text-center galeriaHome__titulo">SÉPTIMA 10 GRAN RESERVA</h5>
-            <h6 class="card-title text-center galeriaHome__subtitulo">Malbec</h6>
-            <p class="card-text bg-light text-center galeriaHome__descripcion">Aluvial poco profundo – Franco a franco
-              arcilloso con presencia
-              de canto rodado en
-              profundidad.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 ">
-          <img src="imagenes/vinos/Vino_Tinto_3.png" class="card-img-top mx-auto" alt="Vino 3">
-          <div class="card-body">
-            <h5 class="card-title text-center galeriaHome__titulo">SÉPTIMA 10 RESERVA</h5>
-            <h6 class="card-title text-center galeriaHome__subtitulo">Cabernet Franc</h6>
-            <p class="card-text bg-light text-center galeriaHome__descripcion">Franco arenoso, con presencia de
-              piedras (canto rodado)
-              cubiertas con
-              Calcáreo en
-              todo el perfil</p>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card h-100 ">
-          <img src="imagenes/vinos/Vino_Tinto_4.jpg" class="card-img-top mx-auto" alt="Vino 3">
-          <div class="card-body">
-            <h5 class="card-title text-center galeriaHome__titulo">SÉPTIMA 10 ESPECIAL</h5>
-            <h6 class="card-title text-center galeriaHome__subtitulo">Tannat</h6>
-            <p class="card-text bg-light text-center galeriaHome__descripcion">Aluvial poco profundo – Franco a franco
-              arcilloso con presencia
-              de canto rodado en
-              profundidad.</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-  </section>
-  <div class="contenedor">
-    <section id="promociones" class="promociones">
-      <div class="formatoTarjeta">
-        <p><i class="fas fa-tags fa-2x"></i></p>
-        <h3>Promociones</i></h2>
-          <p>Comprando 3 Unidades</p>
-      </div>
-    </section>
-    <section id="envios" class="envios">
-      <div class="formatoTarjeta">
-        <p><i class="fas fa-shipping-fast fa-2x"></i></p>
-        <h3>Envio gratis</i></h2>
-          <p>Reconquista y Avellaneda</p>
-      </div>
-    </section>
-    <section id="formasDePago" class="formasDePago">
-      <div class="formatoTarjeta">
-        <p><i class="far fa-credit-card fa-2x"></i></p>
-        <h3>forma de pago</i></h2>
-          <p>Efectivo - Transferencia</p>
-      </div>
-    </section>
-    <section id="seleccion" class="seleccion">
-      <div class="formatoTarjeta">
-        <p><i class="fas fa-glass-cheers fa-2x"></i></p>
-        <h3>hacete socio</i></h2>
-          <p>Suma beneficios</p>
-      </div>
-    </section>
-  </div>
-  </section>
-  </div>
-  <footer id="footer" class="footer">
-    <div class="footer__diseñadoPor">
-      <p class="parrafo-1">Diseñado por:</p>
-      <p class="parrafo-2">Nestor Gomez</p>
-    </div>
-    <div class="footer__redes">
-      <div>
-        <p><i class="fab fa-instagram fa-2x fdo--instagram">
-          </i></p>
-      </div>
-      <div>
-        <p><i class="fab fa-whatsapp fa-2x fdo--whatsapp"></i></p>
-      </div>
-      <div>
-        <p><i class="fab fa-facebook-f fa-2x fdo--facebook"></i></p>
-      </div>
-
-
-    </div>
-
-  </footer>
-
+    </footer>
   </div>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -247,6 +325,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
+  <script src="js/jarallax.min.js"></script>
 
 </body>
 

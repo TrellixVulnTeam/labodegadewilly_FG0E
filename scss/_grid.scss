@@ -1,103 +1,83 @@
-@media screen and (min-width: 768px) {
-  .contenedor {
+#header {
+  grid-area: cabecera;
+}
+#menu {
+  grid-area: menu;
+}
+#footer {
+  grid-area: footer;
+}
+
+#productos {
+  grid-area: productos;
+}
+#galeriaVinos {
+  grid-area: galeriavinos;
+}
+#telollevamos {
+  grid-area: telollevamos;
+}
+
+#galeriaProductos {
+  grid-area: zonaProductos;
+}
+
+#barralateral {
+  grid-area: barralateral;
+}
+#GaleriaPromoIndex {
+  grid-area: galeriaPromoIndex;
+}
+
+@media screen and (min-width: 576px) {
+  .contenedor__home {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* grid-template-rows: 8rem 4rem auto auto auto 4rem; */
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-      "promociones envios"
-      "formasDePago seleccion";
-  }
-  .contenedor__productos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas: "galeriaproductoshome galeriaproductoshome";
-  }
-  .contenedor__vinos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas:
-      "cabecera cabecera"
-      "menu menu"
-      "vinos vinos"
-      "promociones envios"
-      "formasDePago seleccion"
-      "footer footer";
-  }
-  .contenedor__destilados {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas:
-      "cabecera cabecera"
-      "menu menu"
-      "destilados destilados"
-      "destilados2 destilados2"
-      "promociones envios"
-      "formasDePago seleccion"
-      "footer footer";
-  }
-  .contenedor__espumantes {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas:
-      "cabecera cabecera"
-      "menu menu"
-      "espumantes espumantes"
-      "espumantes2 espumantes2"
-      "promociones envios"
-      "formasDePago seleccion"
-      "footer footer ";
+      "cabecera cabecera cabecera"
+      "menu menu menu"
+      "video video video"
+      "productos productos productos"
+      "galeriaPromoIndex galeriaPromoIndex galeriaPromoIndex"
+      "telollevamos telollevamos telollevamos"
+      "footer footer footer";
+    margin: auto;
   }
 }
+
+@media screen and (min-width: 576px) {
+  .contenedor__ventaProductos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "cabecera cabecera cabecera"
+      "menu menu menu"
+      "barralateral zonaProductos zonaProductos"
+      "footer footer footer";
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contenedor__ventaProductos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "cabecera cabecera cabecera cabecera"
+      "menu menu menu menu"
+      "barralateral zonaProductos zonaProductos zonaProductos"
+      "footer footer footer footer";
+  }
+}
+
 @media screen and (min-width: 1200px) {
-  .contenedor {
+  .contenedor__ventaProductos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas: "promociones envios formasDePago seleccion";
-  }
-  .contenedor__productos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas: "galeriaproductoshome galeriaproductoshome galeriaproductoshome galeriaproductoshome";
-  }
-  .contenedor__vinos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 0px;
+    grid-template-columns: repeat(5, 1fr);
     grid-template-areas:
-      "cabecera cabecera cabecera cabecera"
-      "menu menu menu menu"
-      "vinos vinos vinos vinos"
-      "promociones envios formasDePago seleccion"
-      "footer footer footer footer";
-  }
-  .contenedor__destilados {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas:
-      "cabecera cabecera cabecera cabecera"
-      "menu menu menu menu"
-      "destilados destilados destilados destilados"
-      "destilados2 destilados2 destilados2 destilados2"
-      "promociones envios formasDePago seleccion"
-      "footer footer footer footer";
-  }
-  .contenedor__espumantes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas:
-      "cabecera cabecera cabecera cabecera"
-      "menu menu menu menu"
-      "espumantes espumantes espumantes espumantes"
-      "espumantes2 espumantes2 espumantes2 espumantes2"
-      "promociones envios formasDePago seleccion"
-      "footer footer footer footer";
+      "cabecera cabecera cabecera cabecera cabecera"
+      "menu menu menu menu menu"
+      "barralateral zonaProductos zonaProductos zonaProductos publicidad"
+      "footer footer footer footer footer";
   }
 }

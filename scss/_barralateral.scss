@@ -1,12 +1,94 @@
 .barraLateral {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .barraLateral {
-    display: block;
-    grid-area: barralateral;
-    background-color: blue;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $colorprimario;
+
+  .accordion-button {
+    padding: 0.5rem;
+    background-color: $colorsecundario;
+    color: $colorprimario;
+    margin: auto;
+    font-weight: bold;
+  }
+  .form-check-label {
+    color: $colorsecundario;
+  }
+  .form-check:hover {
+    background-color: $colorprimarioclaro;
+  }
+
+  .texto-filtro {
+    font-size: 1.1rem;
+  }
+  .filtro_titulo {
+    color: white;
+    text-decoration: none;
+  }
+  .border-top {
+    border-top: 1px solid $colorsecundario !important;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .link-dark {
+    color: $colorsecundario;
+  }
+
+  .dropdown-toggle {
+    outline: 0;
+  }
+
+  .btn-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 1.5rem;
+    font-weight: 400;
+    color: white;
+    background-color: $colorprimario;
+    border: 0;
+    box-shadow: 0;
+  }
+
+  .btn-toggle::before {
+    width: 1.25em;
+    line-height: 0;
+    content: url("");
+    content: ">";
+    transition: transform 0.35s ease;
+    transform-origin: 0.5em 50%;
+  }
+
+  .btn-check:focus + .btn,
+  .btn:focus {
+    outline: 0;
+    box-shadow: 0;
+  }
+
+  .btn-toggle:hover,
+  .btn-toggle:focus {
+    color: white;
+  }
+
+  .btn-toggle[aria-expanded="true"] {
+    color: white;
+  }
+  .btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+  }
+
+  .btn-toggle-nav a {
+    display: inline-flex;
+    padding: 0.1875rem 0.5rem;
+    margin-top: 0.125rem;
+    margin-left: 1.25rem;
+    text-decoration: none;
+  }
+  .btn-toggle-nav a:hover,
+  .btn-toggle-nav a:focus {
+    background-color: $colorprimarioclaro;
+  }
+
+  .scrollarea {
+    overflow-y: auto;
   }
 }

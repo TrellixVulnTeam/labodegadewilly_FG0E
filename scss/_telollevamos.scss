@@ -1,0 +1,65 @@
+#telollevamos::before {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#telollevamos {
+  .telollevamos {
+    height: 20rem;
+
+    h3 {
+      font-size: 1rem;
+      color: $colorblanco;
+      margin-top: 1rem;
+
+      span {
+        padding: 5px 10px;
+        border: 1px solid $colorsecundario;
+      }
+    }
+    p {
+      font-size: 15px;
+    }
+
+    img {
+      height: 50px;
+      width: 50px;
+      border-radius: 5px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #telollevamos {
+    .telollevamos {
+      height: 20rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #telollevamos {
+    .telollevamos {
+      height: 20rem;
+      h3 {
+        font-size: 2rem;
+        color: $colorblanco;
+        margin-top: 1rem;
+      }
+      p {
+        font-size: 1.25rem;
+        span {
+          border-bottom: solid 1px $colorsecundario;
+        }
+      }
+    }
+  }
+}

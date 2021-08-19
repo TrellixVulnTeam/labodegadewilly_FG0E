@@ -1,8 +1,8 @@
 .header {
-  grid-area: cabecera;
   font-family: "Roboto", sans-serif;
-  background-color: $colorgrisclaro;
+  background-color: $colorfondo;
   color: $colorsecundario;
+  display: grid;
   .header__textos {
     font-size: 10.5px;
   }

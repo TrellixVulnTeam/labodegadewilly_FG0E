@@ -18,41 +18,49 @@ html {
   ul {
     padding-left: 0;
   }
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    margin-bottom: 0;
+  }
 }
 
 body {
   font-family: "Cinzel", serif;
   font-size: 16px;
-  // background-color: $colorsecundario;
+  background-color: $colorfondo;
 }
-@import "navbar";
+
 @import "grid";
 @import "header";
 @import "menu";
 @import "cabecera";
 @import "slider";
 @import "videohome";
-@import "tarjetaproductos";
-@import "galeriahome";
-@import "promociones";
+@import "sectorPromosIndex";
+@import "sectorProductosParaVenta";
 
+@import "promociones";
 @import "tarjetas";
-@import "estilocards";
+@import "telollevamos";
+@import "publicidad";
+@import "sectorProductosParaVenta";
 @import "barralateral";
 @import "footer";
 
 .contenedor {
   width: 100%;
-  // max-width: 1200px;
   margin: 0 auto;
   background-color: black;
-  height: auto;
-}
-.contenedor__vinos {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  background-color: $colornegro50;
   height: auto;
 }
 
@@ -60,34 +68,4 @@ body {
   height: $height;
   grid-area: $gridArea;
   display: flex;
-}
-
-.promociones {
-  @include promos(promociones, 35vh, flex);
-}
-.envios {
-  @include promos(envios, 35vh, flex);
-}
-.formasDePago {
-  @include promos(formasDePago, 35vh, flex);
-}
-.seleccion {
-  @include promos(seleccion, 35vh, flex);
-}
-
-#galeriaVinos {
-  grid-area: vinos;
-}
-
-#galeriaespumantes {
-  grid-area: espumantes;
-}
-#galeriaespumantes2 {
-  grid-area: espumantes2;
-}
-#galeriadestilados {
-  grid-area: destilados;
-}
-#galeriadestilados2 {
-  grid-area: destilados2;
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * Bootstrap v5.0.1 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -7492,182 +7491,88 @@ html ol,
 html ul {
   padding-left: 0; }
 
+html h1, html .h1,
+html .h1,
+html h2,
+html .h2,
+html .h2,
+html h3,
+html .h3,
+html .h3,
+html h4,
+html .h4,
+html .h4,
+html h5,
+html .h5,
+html .h5,
+html h6,
+html .h6,
+html .h6 {
+  margin-bottom: 0; }
+
 body {
   font-family: "Cinzel", serif;
-  font-size: 16px; }
+  font-size: 16px;
+  background-color: #1d1712; }
 
-@media (min-width: 576px) {
-  .navbar-expand-sm {
-    flex-wrap: nowrap;
-    justify-content: flex-start; }
-    .navbar-expand-sm .navbar-nav {
-      flex-direction: row; }
-      .navbar-expand-sm .navbar-nav .dropdown-menu {
-        position: absolute; }
-      .navbar-expand-sm .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem; }
-    .navbar-expand-sm .navbar-nav-scroll {
-      overflow: visible; }
-    .navbar-expand-sm .navbar-collapse {
-      display: flex !important;
-      flex-basis: auto; }
-    .navbar-expand-sm .navbar-toggler {
-      display: none; } }
+#header {
+  grid-area: cabecera; }
 
-@media (min-width: 768px) {
-  .navbar-expand-md {
-    flex-wrap: nowrap;
-    justify-content: flex-start; }
-    .navbar-expand-md .navbar-nav {
-      flex-direction: row; }
-      .navbar-expand-md .navbar-nav .dropdown-menu {
-        position: absolute; }
-      .navbar-expand-md .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem; }
-    .navbar-expand-md .navbar-nav-scroll {
-      overflow: visible; }
-    .navbar-expand-md .navbar-collapse {
-      display: flex !important;
-      flex-basis: auto; }
-    .navbar-expand-md .navbar-toggler {
-      display: none; } }
+#menu {
+  grid-area: menu; }
 
-@media (min-width: 992px) {
-  .navbar-expand-lg {
-    flex-wrap: nowrap;
-    justify-content: flex-start; }
-    .navbar-expand-lg .navbar-nav {
-      flex-direction: row; }
-      .navbar-expand-lg .navbar-nav .dropdown-menu {
-        position: absolute; }
-      .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem; }
-    .navbar-expand-lg .navbar-nav-scroll {
-      overflow: visible; }
-    .navbar-expand-lg .navbar-collapse {
-      display: flex !important;
-      flex-basis: auto; }
-    .navbar-expand-lg .navbar-toggler {
-      display: none; } }
+#footer {
+  grid-area: footer; }
 
-@media (min-width: 1200px) {
-  .navbar-expand-xl {
-    flex-wrap: nowrap;
-    justify-content: flex-start; }
-    .navbar-expand-xl .navbar-nav {
-      flex-direction: row; }
-      .navbar-expand-xl .navbar-nav .dropdown-menu {
-        position: absolute; }
-      .navbar-expand-xl .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem; }
-    .navbar-expand-xl .navbar-nav-scroll {
-      overflow: visible; }
-    .navbar-expand-xl .navbar-collapse {
-      display: flex !important;
-      flex-basis: auto; }
-    .navbar-expand-xl .navbar-toggler {
-      display: none; } }
+#productos {
+  grid-area: productos; }
 
-@media (min-width: 1400px) {
-  .navbar-expand-xxl {
-    flex-wrap: nowrap;
-    justify-content: flex-start; }
-    .navbar-expand-xxl .navbar-nav {
-      flex-direction: row; }
-      .navbar-expand-xxl .navbar-nav .dropdown-menu {
-        position: absolute; }
-      .navbar-expand-xxl .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem; }
-    .navbar-expand-xxl .navbar-nav-scroll {
-      overflow: visible; }
-    .navbar-expand-xxl .navbar-collapse {
-      display: flex !important;
-      flex-basis: auto; }
-    .navbar-expand-xxl .navbar-toggler {
-      display: none; } }
+#galeriaVinos {
+  grid-area: galeriavinos; }
 
-.navbar-expand {
-  flex-wrap: nowrap;
-  justify-content: flex-start; }
-  .navbar-expand .navbar-nav {
-    flex-direction: row; }
-    .navbar-expand .navbar-nav .dropdown-menu {
-      position: absolute; }
-    .navbar-expand .navbar-nav .nav-link {
-      padding-right: 0.5rem;
-      padding-left: 0.5rem; }
-  .navbar-expand .navbar-nav-scroll {
-    overflow: visible; }
-  .navbar-expand .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto; }
-  .navbar-expand .navbar-toggler {
-    display: none; }
+#telollevamos {
+  grid-area: telollevamos; }
+
+#galeriaProductos {
+  grid-area: zonaProductos; }
+
+#barralateral {
+  grid-area: barralateral; }
+
+#GaleriaPromoIndex {
+  grid-area: galeriaPromoIndex; }
+
+@media screen and (min-width: 576px) {
+  .contenedor__home {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "cabecera cabecera cabecera" "menu menu menu" "video video video" "productos productos productos" "galeriaPromoIndex galeriaPromoIndex galeriaPromoIndex" "telollevamos telollevamos telollevamos" "footer footer footer";
+    margin: auto; } }
+
+@media screen and (min-width: 576px) {
+  .contenedor__ventaProductos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "cabecera cabecera cabecera" "menu menu menu" "barralateral zonaProductos zonaProductos" "footer footer footer";
+    margin: auto; } }
 
 @media screen and (min-width: 768px) {
-  .contenedor {
+  .contenedor__ventaProductos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* grid-template-rows: 8rem 4rem auto auto auto 4rem; */
-    grid-template-areas: "promociones envios" "formasDePago seleccion"; }
-  .contenedor__productos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas: "galeriaproductoshome galeriaproductoshome"; }
-  .contenedor__vinos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas: "cabecera cabecera" "menu menu" "vinos vinos" "promociones envios" "formasDePago seleccion" "footer footer"; }
-  .contenedor__destilados {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas: "cabecera cabecera" "menu menu" "destilados destilados" "destilados2 destilados2" "promociones envios" "formasDePago seleccion" "footer footer"; }
-  .contenedor__espumantes {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas: "cabecera cabecera" "menu menu" "espumantes espumantes" "espumantes2 espumantes2" "promociones envios" "formasDePago seleccion" "footer footer "; } }
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "cabecera cabecera cabecera cabecera" "menu menu menu menu" "barralateral zonaProductos zonaProductos zonaProductos" "footer footer footer footer"; } }
 
 @media screen and (min-width: 1200px) {
-  .contenedor {
+  .contenedor__ventaProductos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas: "promociones envios formasDePago seleccion"; }
-  .contenedor__productos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas: "galeriaproductoshome galeriaproductoshome galeriaproductoshome galeriaproductoshome"; }
-  .contenedor__vinos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 0px;
-    grid-template-areas: "cabecera cabecera cabecera cabecera" "menu menu menu menu" "vinos vinos vinos vinos" "promociones envios formasDePago seleccion" "footer footer footer footer"; }
-  .contenedor__destilados {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas: "cabecera cabecera cabecera cabecera" "menu menu menu menu" "destilados destilados destilados destilados" "destilados2 destilados2 destilados2 destilados2" "promociones envios formasDePago seleccion" "footer footer footer footer"; }
-  .contenedor__espumantes {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 5px;
-    grid-template-areas: "cabecera cabecera cabecera cabecera" "menu menu menu menu" "espumantes espumantes espumantes espumantes" "espumantes2 espumantes2 espumantes2 espumantes2" "promociones envios formasDePago seleccion" "footer footer footer footer"; } }
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "cabecera cabecera cabecera cabecera cabecera" "menu menu menu menu menu" "barralateral zonaProductos zonaProductos zonaProductos publicidad" "footer footer footer footer footer"; } }
 
 .header {
-  grid-area: cabecera;
   font-family: "Roboto", sans-serif;
-  background-color: #f8f8f8;
-  color: #b09e80; }
+  background-color: #1d1712;
+  color: #b09e80;
+  display: grid; }
   .header .header__textos {
     font-size: 10.5px; }
 
@@ -7679,10 +7584,12 @@ body {
       font-size: 1rem; } }
 
 .navbar {
-  grid-area: menu;
   padding-top: 0;
   padding-bottom: 0;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  flex-wrap: wrap; }
+  .navbar .container-fluid, .navbar .container-sm, .navbar .container-md, .navbar .container-lg, .navbar .container-xl, .navbar .container-xxl {
+    padding-right: 0; }
   .navbar .nav-item {
     font-size: 0.8rem; }
   .navbar .navbar-toggler {
@@ -7703,9 +7610,9 @@ body {
       position: relative;
       top: -12px;
       left: 3px;
-      background-color: red;
       color: #fff;
       margin-left: -1rem;
+      background-color: red;
       padding: 0.5px 2px;
       border-radius: 5px;
       font-size: 0.7rem; }
@@ -7788,8 +7695,7 @@ body {
 
 .banner {
   grid-area: video;
-  width: 100%;
-  height: 100vh;
+  height: 59vh;
   overflow: hidden;
   position: relative; }
   .banner video {
@@ -7818,7 +7724,7 @@ body {
       color: #fff;
       line-height: 2rem;
       padding: 0 10px;
-      margin-top: -5rem; }
+      margin-top: -2rem; }
       .banner .contenido_video h2 span, .banner .contenido_video .h2 span {
         border-bottom: 1px solid #b09e80; }
     .banner .contenido_video h3, .banner .contenido_video .h3 {
@@ -7829,51 +7735,317 @@ body {
       border: 1px solid #b09e80; }
 
 @media screen and (min-width: 768px) {
-  .banner .contenido_video h2, .banner .contenido_video .h2 {
-    font-size: 2.5rem;
-    color: #fff;
-    line-height: 3rem;
-    padding: 0 50px; }
-    .banner .contenido_video h2 span, .banner .contenido_video .h2 span {
-      border-bottom: 1px solid #b09e80; }
-  .banner .contenido_video h3, .banner .contenido_video .h3 {
-    font-size: 1.5rem;
-    color: #fff;
-    margin-top: 1rem;
-    padding: 5px 20px;
-    border: 1px solid #b09e80; } }
+  .banner {
+    height: 42vh; }
+    .banner .contenido_video h2, .banner .contenido_video .h2 {
+      font-size: 2.5rem;
+      color: #fff;
+      line-height: 3rem;
+      padding: 0 50px;
+      margin-top: 1rem; }
+      .banner .contenido_video h2 span, .banner .contenido_video .h2 span {
+        border-bottom: 1px solid #b09e80; }
+    .banner .contenido_video h3, .banner .contenido_video .h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-top: 1rem;
+      padding: 5px 20px;
+      border: 1px solid #b09e80; } }
 
-.contenedor__productos {
-  padding-top: 1rem;
-  grid-area: galeriaproductoshome; }
-  .contenedor__productos .tarjeta {
+@media screen and (min-width: 1200px) {
+  .banner {
+    height: 48vh; }
+    .banner .contenido_video h2, .banner .contenido_video .h2 {
+      font-size: 2.5rem;
+      color: #fff;
+      line-height: 3rem;
+      padding: 0 50px; }
+      .banner .contenido_video h2 span, .banner .contenido_video .h2 span {
+        border-bottom: 1px solid #b09e80; }
+    .banner .contenido_video h3, .banner .contenido_video .h3 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-top: 1rem;
+      padding: 5px 20px;
+      border: 1px solid #b09e80; } }
+
+.contenedorflex1 {
+  background-color: #1d1712;
+  color: #b09e80; }
+
+.ContenedorPromosIndex {
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .ContenedorPromosIndex .cards {
     position: relative;
-    height: 300px;
-    width: 350px;
-    background-color: red; }
-    .contenedor__productos .tarjeta .tarjetas_img {
-      position: relative;
-      top: 0;
-      left: 0; }
-    .contenedor__productos .tarjeta .tarjetas_textos {
+    width: 300px;
+    height: 450px;
+    background: linear-gradient(black, #192537);
+    border: 1px solid #b09e80;
+    margin: 5px;
+    border-radius: 0;
+    overflow: hidden; }
+    .ContenedorPromosIndex .cards .descuento {
+      font-family: "Roboto", sans-serif;
+      font-size: 0.8rem;
       position: absolute;
-      text-align: center; }
+      top: 10px;
+      right: 10px;
+      color: white;
+      font-size: 1rem;
+      z-index: 1001; }
+      .ContenedorPromosIndex .cards .descuento span {
+        padding: 2px;
+        border-radius: 4px;
+        background-color: red; }
+    .ContenedorPromosIndex .cards .contenido {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 5px;
+      transform: translateY(-100%);
+      transition: 0.4s; }
+      .ContenedorPromosIndex .cards .contenido .detalles {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center; }
+        .ContenedorPromosIndex .cards .contenido .detalles .iconos {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          margin-top: 5px; }
+          .ContenedorPromosIndex .cards .contenido .detalles .iconos li {
+            list-style: none;
+            margin: 4px; }
+            .ContenedorPromosIndex .cards .contenido .detalles .iconos li a {
+              width: 30px;
+              height: 30px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1rem;
+              color: #fff;
+              font-weight: lighter;
+              text-decoration: none;
+              transition: 0.3s; }
+        .ContenedorPromosIndex .cards .contenido .detalles h2, .ContenedorPromosIndex .cards .contenido .detalles .h2 {
+          color: white;
+          font-size: 1.2em;
+          font-weight: 500; }
+          .ContenedorPromosIndex .cards .contenido .detalles h2 span, .ContenedorPromosIndex .cards .contenido .detalles .h2 span {
+            font-size: 0.8em;
+            font-weight: 400;
+            color: #2196f3; }
+    .ContenedorPromosIndex .cards .imgBx {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      transition: 0.4s;
+      z-index: 1000;
+      border-radius: 0;
+      overflow: hidden;
+      transform-origin: top; }
+      .ContenedorPromosIndex .cards .imgBx img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    .ContenedorPromosIndex .cards .nombreyprecio {
+      height: 100%;
+      z-index: 15000;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center; }
+      .ContenedorPromosIndex .cards .nombreyprecio .tipodevino {
+        font-size: 15px;
+        color: white; }
+      .ContenedorPromosIndex .cards .nombreyprecio .fondo {
+        font-family: "Cinzel", serif;
+        background-color: #2e4465;
+        width: 100%;
+        text-align: center;
+        color: #b09e80;
+        font-weight: bold;
+        padding-top: 4px;
+        padding-bottom: 4px; }
+      .ContenedorPromosIndex .cards .nombreyprecio .precioviejo {
+        text-decoration: line-through;
+        font-weight: lighter;
+        color: gray; }
+      .ContenedorPromosIndex .cards .nombreyprecio .preciocondescuento {
+        color: white;
+        font-size: 16px;
+        font-weight: bold; }
+      .ContenedorPromosIndex .cards .nombreyprecio h5, .ContenedorPromosIndex .cards .nombreyprecio .h5 {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        font-weight: lighter;
+        line-height: 1.2rem;
+        margin-bottom: 0.45rem; }
 
-.galeriaHome {
-  height: auto;
-  grid-area: galeriaHome;
-  display: flex; }
-  .galeriaHome .card-img-top {
-    height: auto;
-    width: 25%; }
-  .galeriaHome .galeriaHome__titulo {
-    font-weight: normal; }
-  .galeriaHome .galeriaHome__subtitulo {
-    font-weight: bolder;
-    color: #192537;
-    background-color: var(--color-secundario); }
-  .galeriaHome .galeriaHome__descripcion {
-    color: #192537; }
+.ContenedorPromosIndex .cards:hover .imgBx {
+  transform: translateY(1px) scale(0.85); }
+
+.ContenedorPromosIndex .cards:hover .contenido {
+  transform: translateY(-7%); }
+
+.iconos li a:hover {
+  transform: scale(1.4); }
+  .iconos li a:hover i {
+    color: #b09e80; }
+
+.contenedorflex {
+  background-color: #000; }
+
+.contenedorcards {
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .contenedorcards .cards {
+    position: relative;
+    width: 165px;
+    max-width: 165px;
+    height: 400px;
+    background: linear-gradient(black, #192537);
+    border: 1px solid #b09e80;
+    margin: 5px;
+    border-radius: 0;
+    overflow: hidden; }
+    .contenedorcards .cards .descuento {
+      font-family: "Roboto", sans-serif;
+      font-size: 0.8rem;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      font-size: 1rem;
+      z-index: 1001; }
+      .contenedorcards .cards .descuento span {
+        padding: 2px;
+        border-radius: 4px;
+        background-color: red; }
+    .contenedorcards .cards .contenido {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 5px;
+      transform: translateY(-100%);
+      transition: 0.4s; }
+      .contenedorcards .cards .contenido .detalles {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center; }
+        .contenedorcards .cards .contenido .detalles .iconos {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          margin-top: 5px; }
+          .contenedorcards .cards .contenido .detalles .iconos li {
+            list-style: none;
+            margin: 4px; }
+            .contenedorcards .cards .contenido .detalles .iconos li a {
+              width: 30px;
+              height: 30px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1rem;
+              color: #fff;
+              font-weight: lighter;
+              text-decoration: none;
+              transition: 0.3s; }
+        .contenedorcards .cards .contenido .detalles h2, .contenedorcards .cards .contenido .detalles .h2 {
+          color: white;
+          font-size: 1.2em;
+          font-weight: 500; }
+          .contenedorcards .cards .contenido .detalles h2 span, .contenedorcards .cards .contenido .detalles .h2 span {
+            font-size: 0.8em;
+            font-weight: 400;
+            color: #2196f3; }
+    .contenedorcards .cards .imgBx {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      transition: 0.4s;
+      z-index: 1000;
+      border-radius: 0;
+      overflow: hidden;
+      transform-origin: top; }
+      .contenedorcards .cards .imgBx img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    .contenedorcards .cards .nombreyprecio {
+      height: 100%;
+      z-index: 15000;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center; }
+      .contenedorcards .cards .nombreyprecio .tipodevino {
+        font-size: 12px;
+        color: white; }
+      .contenedorcards .cards .nombreyprecio .fondo {
+        font-family: "Cinzel", serif;
+        background-color: #2e4465;
+        width: 100%;
+        text-align: center;
+        color: #b09e80;
+        font-weight: bold;
+        padding-top: 4px;
+        padding-bottom: 4px; }
+      .contenedorcards .cards .nombreyprecio .precioviejo {
+        text-decoration: line-through;
+        font-weight: lighter;
+        color: gray; }
+      .contenedorcards .cards .nombreyprecio .preciocondescuento {
+        color: white;
+        font-size: 16px;
+        font-weight: bold; }
+      .contenedorcards .cards .nombreyprecio h5, .contenedorcards .cards .nombreyprecio .h5 {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: lighter;
+        line-height: 1.2rem;
+        margin-bottom: 0.25rem; }
+
+.contenedorcards .cards:hover .imgBx {
+  transform: translateY(1px) scale(0.85); }
+
+.contenedorcards .cards:hover .contenido {
+  transform: translateY(-5%); }
+
+.iconos li a:hover {
+  transform: scale(1.4); }
+  .iconos li a:hover i {
+    color: #b09e80; }
 
 .formatoTarjeta {
   display: flex;
@@ -7898,37 +8070,93 @@ body {
     color: #192537; }
 
 .tarjetas {
-  background-color: #282829; }
+  background-color: #1d1712; }
   .tarjetas .card {
-    background-color: inherit;
-    border: 0;
     border-radius: 0;
-    padding-right: 4px;
-    padding-left: 4px; }
-  .tarjetas .tarjeta .card-img-overlay h5, .tarjetas .tarjeta .card-img-overlay .h5 {
-    font-size: 2rem; }
-    .tarjetas .tarjeta .card-img-overlay h5 span, .tarjetas .tarjeta .card-img-overlay .h5 span {
-      border-bottom: solid 1px #b09e80; }
+    border: 0;
+    transition: 0.2s ease-in-out; }
+    .tarjetas .card .card-img-overlay {
+      position: absolute;
+      display: flex;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.4);
+      background-blend-mode: soft-light;
+      flex-direction: column;
+      justify-content: center;
+      align-content: flex-start; }
+      .tarjetas .card .card-img-overlay h5, .tarjetas .card .card-img-overlay .h5 {
+        font-size: 1.25rem; }
+        .tarjetas .card .card-img-overlay h5 span, .tarjetas .card .card-img-overlay .h5 span {
+          color: #b09e80;
+          border-bottom: solid 1px #b09e80;
+          font-weight: bold; }
+      .tarjetas .card .card-img-overlay a span {
+        color: #fff;
+        font-size: 1rem; }
+  .tarjetas .tarjeta {
+    padding: 0.5rem;
+    border: 1px solid blue; }
 
-.tarjeta::before {
-  position: absolute;
+#telollevamos::before {
   content: "";
-  top: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background-color: #282829;
-  opacity: 50%; }
+  z-index: -1; }
+
+#telollevamos .telollevamos {
+  height: 20rem; }
+  #telollevamos .telollevamos h3, #telollevamos .telollevamos .h3 {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 1rem; }
+    #telollevamos .telollevamos h3 span, #telollevamos .telollevamos .h3 span {
+      padding: 5px 10px;
+      border: 1px solid #b09e80; }
+  #telollevamos .telollevamos p {
+    font-size: 15px; }
+  #telollevamos .telollevamos img {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px; }
+
+@media screen and (min-width: 768px) {
+  #telollevamos .telollevamos {
+    height: 20rem; } }
+
+@media screen and (min-width: 1200px) {
+  #telollevamos .telollevamos {
+    height: 20rem; }
+    #telollevamos .telollevamos h3, #telollevamos .telollevamos .h3 {
+      font-size: 2rem;
+      color: #fff;
+      margin-top: 1rem; }
+    #telollevamos .telollevamos p {
+      font-size: 1.25rem; }
+      #telollevamos .telollevamos p span {
+        border-bottom: solid 1px #b09e80; } }
+
+@media screen and (min-width: 768px) {
+  .publicidad {
+    display: none; } }
+
+@media screen and (min-width: 1200px) {
+  .publicidad {
+    grid-area: publicidad;
+    display: flex;
+    flex-direction: column;
+    justify-content: start; } }
 
 .contenedorflex {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  background-color: #000; }
 
 .contenedorcards {
-  grid-area: galeriaHome;
   position: relative;
-  width: 1280px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -7936,25 +8164,39 @@ body {
   flex-wrap: wrap; }
   .contenedorcards .cards {
     position: relative;
-    width: 200px;
+    width: 165px;
+    max-width: 165px;
     height: 400px;
-    background: linear-gradient(#2e4465, #2e4465 30%, #192537, #192537 30%);
+    background: linear-gradient(black, #192537);
     border: 1px solid #b09e80;
-    margin: 10px;
-    border-radius: 20px;
+    margin: 5px;
+    border-radius: 0;
     overflow: hidden; }
+    .contenedorcards .cards .descuento {
+      font-family: "Roboto", sans-serif;
+      font-size: 0.8rem;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      font-size: 1rem;
+      z-index: 1001; }
+      .contenedorcards .cards .descuento span {
+        padding: 2px;
+        border-radius: 4px;
+        background-color: red; }
     .contenedorcards .cards .contenido {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 90%;
       display: flex;
       justify-content: center;
       align-items: flex-end;
       padding-bottom: 5px;
-      transform: translateY(100%);
-      transition: 0.5s; }
+      transform: translateY(-100%);
+      transition: 0.4s; }
       .contenedorcards .cards .contenido .detalles {
         display: flex;
         justify-content: center;
@@ -7969,17 +8211,16 @@ body {
             list-style: none;
             margin: 4px; }
             .contenedorcards .cards .contenido .detalles .iconos li a {
-              width: 40px;
-              height: 40px;
+              width: 30px;
+              height: 30px;
               display: flex;
               justify-content: center;
               align-items: center;
-              background: #b09e80;
-              border-radius: 50%;
-              font-size: 1.2rem;
-              color: #192537;
+              font-size: 1rem;
+              color: #fff;
+              font-weight: lighter;
               text-decoration: none;
-              transition: 0.5s; }
+              transition: 0.3s; }
         .contenedorcards .cards .contenido .detalles h2, .contenedorcards .cards .contenido .detalles .h2 {
           color: white;
           font-size: 1.2em;
@@ -7993,10 +8234,10 @@ body {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 80%;
       transition: 0.4s;
       z-index: 1000;
-      border-radius: 20px;
+      border-radius: 0;
       overflow: hidden;
       transform-origin: top; }
       .contenedorcards .cards .imgBx img {
@@ -8006,124 +8247,140 @@ body {
         width: 100%;
         height: 100%;
         object-fit: cover; }
+    .contenedorcards .cards .nombreyprecio {
+      height: 100%;
+      z-index: 15000;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center; }
+      .contenedorcards .cards .nombreyprecio .tipodevino {
+        font-size: 12px;
+        color: white; }
+      .contenedorcards .cards .nombreyprecio .fondo {
+        font-family: "Cinzel", serif;
+        background-color: #2e4465;
+        width: 100%;
+        text-align: center;
+        color: #b09e80;
+        font-weight: bold;
+        padding-top: 4px;
+        padding-bottom: 4px; }
+      .contenedorcards .cards .nombreyprecio .precioviejo {
+        text-decoration: line-through;
+        font-weight: lighter;
+        color: gray; }
+      .contenedorcards .cards .nombreyprecio .preciocondescuento {
+        color: white;
+        font-size: 16px;
+        font-weight: bold; }
+      .contenedorcards .cards .nombreyprecio h5, .contenedorcards .cards .nombreyprecio .h5 {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: lighter;
+        line-height: 1.2rem;
+        margin-bottom: 0.25rem; }
 
 .contenedorcards .cards:hover .imgBx {
-  transform: translateY(30px) scale(0.5); }
+  transform: translateY(1px) scale(0.85); }
 
 .contenedorcards .cards:hover .contenido {
-  transform: translateY(0%); }
+  transform: translateY(-5%); }
 
 .iconos li a:hover {
-  transform: rotate(360deg);
-  background-color: darkmagenta; }
+  transform: scale(1.4); }
+  .iconos li a:hover i {
+    color: #b09e80; }
 
 .barraLateral {
-  display: none; }
-
-@media screen and (min-width: 1200px) {
-  .barraLateral {
-    display: block;
-    grid-area: barralateral;
-    background-color: blue;
-    display: flex;
-    flex-direction: column; } }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #192537; }
+  .barraLateral .accordion-button {
+    padding: 0.5rem;
+    background-color: #b09e80;
+    color: #192537;
+    margin: auto;
+    font-weight: bold; }
+  .barraLateral .form-check-label {
+    color: #b09e80; }
+  .barraLateral .form-check:hover {
+    background-color: #2e4465; }
+  .barraLateral .texto-filtro {
+    font-size: 1.1rem; }
+  .barraLateral .filtro_titulo {
+    color: white;
+    text-decoration: none; }
+  .barraLateral .border-top {
+    border-top: 1px solid #b09e80 !important;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem; }
+  .barraLateral .link-dark {
+    color: #b09e80; }
+  .barraLateral .dropdown-toggle {
+    outline: 0; }
+  .barraLateral .btn-toggle {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 1.5rem;
+    font-weight: 400;
+    color: white;
+    background-color: #192537;
+    border: 0;
+    box-shadow: 0; }
+  .barraLateral .btn-toggle::before {
+    width: 1.25em;
+    line-height: 0;
+    content: url("");
+    content: ">";
+    transition: transform 0.35s ease;
+    transform-origin: 0.5em 50%; }
+  .barraLateral .btn-check:focus + .btn,
+  .barraLateral .btn:focus {
+    outline: 0;
+    box-shadow: 0; }
+  .barraLateral .btn-toggle:hover,
+  .barraLateral .btn-toggle:focus {
+    color: white; }
+  .barraLateral .btn-toggle[aria-expanded="true"] {
+    color: white; }
+  .barraLateral .btn-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg); }
+  .barraLateral .btn-toggle-nav a {
+    display: inline-flex;
+    padding: 0.1875rem 0.5rem;
+    margin-top: 0.125rem;
+    margin-left: 1.25rem;
+    text-decoration: none; }
+  .barraLateral .btn-toggle-nav a:hover,
+  .barraLateral .btn-toggle-nav a:focus {
+    background-color: #2e4465; }
+  .barraLateral .scrollarea {
+    overflow-y: auto; }
 
 .footer {
-  height: 4rem;
-  grid-area: footer;
-  display: flex;
-  background-color: black;
-  color: #b09e80;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch; }
-  .footer .parrafo-1 {
-    height: 1rem; }
-  .footer .parrafo-2 {
-    height: 2rem; }
-  .footer .footer__diseñadoPor {
-    width: 50%;
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  .footer .footer__redes {
-    width: 50%;
-    margin: 0 auto;
-    align-content: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 100%;
-    align-items: center; }
-    .footer .footer__redes .fdo--whatsapp {
-      color: #ceab70; }
-    .footer .footer__redes .fdo--facebook {
-      color: #ceab70; }
-    .footer .footer__redes .fdo--instagram {
-      color: #ceab70; }
-    .footer .footer__redes p {
-      margin: 0 0.5rem;
-      transition: all 0.3s ease-out; }
-    .footer .footer__redes p:hover {
-      color: white;
-      transform: rotate(360deg) scale(1.25, 1.25); }
-
-@media screen and (min-width: 768px) {
-  .footer .footer__diseñadoPor {
-    width: 50%;
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 1rem;
-    align-items: baseline; } }
+  padding-top: 1rem;
+  background-color: #000;
+  padding-bottom: 2rem;
+  color: #fff; }
+  .footer .logo img {
+    height: 50px;
+    width: auto; }
+  .footer .logo h3 span, .footer .logo .h3 span {
+    font-size: 1.5rem;
+    color: #fff;
+    border-bottom: 1px solid #b09e80; }
+  .footer .textos__footer {
+    font-family: roboto;
+    font-size: 15px;
+    font-weight: lighter;
+    padding-top: 0.75rem; }
+  .footer i {
+    padding: 0.1rem;
+    font-size: 1.25rem; }
 
 .contenedor {
   width: 100%;
   margin: 0 auto;
   background-color: black;
   height: auto; }
-
-.contenedor__vinos {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  background-color: #282829;
-  height: auto; }
-
-.promociones {
-  height: 35vh;
-  grid-area: promociones;
-  display: flex; }
-
-.envios {
-  height: 35vh;
-  grid-area: envios;
-  display: flex; }
-
-.formasDePago {
-  height: 35vh;
-  grid-area: formasDePago;
-  display: flex; }
-
-.seleccion {
-  height: 35vh;
-  grid-area: seleccion;
-  display: flex; }
-
-#galeriaVinos {
-  grid-area: vinos; }
-
-#galeriaespumantes {
-  grid-area: espumantes; }
-
-#galeriaespumantes2 {
-  grid-area: espumantes2; }
-
-#galeriadestilados {
-  grid-area: destilados; }
-
-#galeriadestilados2 {
-  grid-area: destilados2; }
