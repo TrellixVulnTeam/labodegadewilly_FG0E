@@ -7575,6 +7575,8 @@ body {
   display: grid; }
   .header .header__textos {
     font-size: 10.5px; }
+  .header a {
+    color: #b09e80; }
 
 @media screen and (min-width: 1200px) {
   .header {
@@ -7604,7 +7606,7 @@ body {
       width: 40px;
       height: 40px; }
     .navbar .navbar-brand .icono {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       color: #b09e80; }
     .navbar .navbar-brand .texto {
       position: relative;
@@ -7636,31 +7638,6 @@ body {
 @media screen and (min-width: 1200px) {
   .navbar .nav-item {
     font-size: 1rem; } }
-
-.cabecera {
-  background-color: white;
-  height: 92vh;
-  grid-area: cabecera;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  background-color: white;
-  justify-content: center;
-  align-items: center; }
-  .cabecera .cabecera__titulo {
-    color: #fff;
-    margin-top: 0.5rem;
-    font-weight: normal; }
-  .cabecera .cabecera__subtitulo {
-    color: #b09e80;
-    font-size: 1.2rem;
-    font-weight: lighter; }
-
-@media screen and (min-width: 768px) {
-  .cabecera {
-    height: 8rem;
-    position: sticky;
-    top: 0; } }
 
 .slider {
   grid-area: slider; }
@@ -8046,6 +8023,38 @@ body {
   transform: scale(1.4); }
   .iconos li a:hover i {
     color: #b09e80; }
+
+.fondologin {
+  background-color: #1d1712; }
+
+.formulariologin {
+  font-family: roboto; }
+  .formulariologin .form-control,
+  .formulariologin btn {
+    min-height: 3.125rem;
+    line-height: initial; }
+  .formulariologin video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none; }
+  .formulariologin .navbar__titulo {
+    font-size: 1.1rem;
+    border-bottom: 1.5px solid #b09e80;
+    margin-left: 0.5rem; }
+  .formulariologin .navbar-brand {
+    font-family: "Cinzel", serif; }
+    .formulariologin .navbar-brand span {
+      font-size: 2rem;
+      color: white; }
+  .formulariologin .btnRedes button:nth-last-child(1):hover {
+    background-color: #3b5998;
+    border: #3b5998;
+    color: #fff; }
+  .formulariologin .btnRedes button:hover {
+    background-color: #d50f25;
+    border: #d50f25;
+    color: #fff; }
 
 .formatoTarjeta {
   display: flex;

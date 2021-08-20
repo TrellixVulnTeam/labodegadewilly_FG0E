@@ -1,0 +1,43 @@
+.fondologin {
+  background-color: $colorfondo;
+}
+
+.formulariologin {
+  font-family: roboto;
+
+  .form-control,
+  btn {
+    min-height: 3.125rem;
+    line-height: initial;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+  .navbar__titulo {
+    font-size: 1.1rem;
+    border-bottom: 1.5px solid $colorsecundario;
+    margin-left: 0.5rem;
+  }
+  .navbar-brand {
+    font-family: "Cinzel", serif;
+
+    span {
+      font-size: 2rem;
+      color: white;
+    }
+  }
+
+  .btnRedes button:nth-last-child(1):hover {
+    background-color: $colorfacebook;
+    border: $colorfacebook;
+    color: $colorblanco;
+  }
+  .btnRedes button:hover {
+    background-color: $colorgoogle;
+    border: $colorgoogle;
+    color: $colorblanco;
+  }
+}
