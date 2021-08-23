@@ -1,8 +1,15 @@
 .footer {
   padding-top: 1rem;
-  background-color: $colornegro;
+  background-color: $colorfondo;
   padding-bottom: 2rem;
   color: $colorblanco;
+
+  a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease-in-out;
+  }
+
   .logo {
     img {
       height: 50px;
@@ -25,5 +32,27 @@
   i {
     padding: 0.1rem;
     font-size: 1.25rem;
+  }
+}
+
+.fade {
+  .navbar__titulo {
+    font-size: 1.1rem;
+    border-bottom: 1.5px solid $colorsecundario;
+    margin-left: 0.5rem;
+  }
+}
+
+.modal-body {
+  font-family: "roboto", serif;
+}
+
+.footer {
+  a:hover {
+    color: $colorsecundario;
+  }
+  i:hover {
+    color: $colorsecundario;
+    transform: scale(2);
   }
 }

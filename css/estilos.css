@@ -7513,7 +7513,7 @@ html .h6 {
 body {
   font-family: "Cinzel", serif;
   font-size: 16px;
-  background-color: #1d1712; }
+  background-color: #000; }
 
 #header {
   grid-area: cabecera; }
@@ -8028,10 +8028,13 @@ body {
   background-color: #1d1712; }
 
 .formulariologin {
-  font-family: roboto; }
+  font-family: "roboto", serif; }
+  .formulariologin h1, .formulariologin .h1 {
+    font-family: "cinzel", serif;
+    font-size: 1.5rem; }
   .formulariologin .form-control,
   .formulariologin btn {
-    min-height: 3.125rem;
+    min-height: 3rem;
     line-height: initial; }
   .formulariologin video {
     width: 100%;
@@ -8045,7 +8048,7 @@ body {
   .formulariologin .navbar-brand {
     font-family: "Cinzel", serif; }
     .formulariologin .navbar-brand span {
-      font-size: 2rem;
+      font-size: 1.25rem;
       color: white; }
   .formulariologin .btnRedes button:nth-last-child(1):hover {
     background-color: #3b5998;
@@ -8150,6 +8153,9 @@ body {
       #telollevamos .telollevamos p span {
         border-bottom: solid 1px #b09e80; } }
 
+.publicidad {
+  background-color: #000; }
+
 @media screen and (min-width: 768px) {
   .publicidad {
     display: none; } }
@@ -8159,7 +8165,7 @@ body {
     grid-area: publicidad;
     display: flex;
     flex-direction: column;
-    justify-content: start; } }
+    justify-content: space-evenly; } }
 
 .contenedorflex {
   background-color: #000; }
@@ -8369,9 +8375,13 @@ body {
 
 .footer {
   padding-top: 1rem;
-  background-color: #000;
+  background-color: #1d1712;
   padding-bottom: 2rem;
   color: #fff; }
+  .footer a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease-in-out; }
   .footer .logo img {
     height: 50px;
     width: auto; }
@@ -8387,6 +8397,21 @@ body {
   .footer i {
     padding: 0.1rem;
     font-size: 1.25rem; }
+
+.fade .navbar__titulo {
+  font-size: 1.1rem;
+  border-bottom: 1.5px solid #b09e80;
+  margin-left: 0.5rem; }
+
+.modal-body {
+  font-family: "roboto", serif; }
+
+.footer a:hover {
+  color: #b09e80; }
+
+.footer i:hover {
+  color: #b09e80;
+  transform: scale(2); }
 
 .contenedor {
   width: 100%;

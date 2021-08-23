@@ -3,11 +3,15 @@
 }
 
 .formulariologin {
-  font-family: roboto;
+  font-family: "roboto", serif;
+  h1 {
+    font-family: "cinzel", serif;
+    font-size: 1.5rem;
+  }
 
   .form-control,
   btn {
-    min-height: 3.125rem;
+    min-height: 3rem;
     line-height: initial;
   }
   video {
@@ -25,7 +29,7 @@
     font-family: "Cinzel", serif;
 
     span {
-      font-size: 2rem;
+      font-size: 1.25rem;
       color: white;
     }
   }
@@ -41,3 +45,16 @@
     color: $colorblanco;
   }
 }
+
+// @media screen and (min-width: 768px) {
+//   .fondologin {
+//     .navbar-brand {
+//       font-family: "Cinzel", serif;
+
+//       span {
+//         font-size: 2rem;
+//         color: white;
+//       }
+//     }
+//   }
+// }
