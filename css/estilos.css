@@ -7575,7 +7575,14 @@ body {
   .header .header__textos {
     font-size: 10.5px; }
   .header a {
-    color: #b09e80; }
+    color: #b09e80;
+    transition: all 0.3s ease-out; }
+  .header a:hover {
+    color: #fff;
+    transform: scale(1.25, 1.25); }
+
+.header a:hover {
+  transform: rotate(360deg) scale(1.25, 1.25); }
 
 @media screen and (min-width: 1200px) {
   .header {
@@ -8105,13 +8112,12 @@ body {
         color: #fff;
         font-size: 1rem; }
   .tarjetas .tarjeta {
-    padding: 0.5rem;
-    border: 1px solid blue; }
+    padding: 0.5rem; }
 
 #telollevamos::before {
   content: "";
   position: absolute;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   left: 0;
   top: 0;
   width: 100%;
@@ -8452,3 +8458,46 @@ body {
   margin: 0 auto;
   background-color: black;
   height: auto; }
+
+.btn-primary {
+  color: #fff;
+  background-color: #192537;
+  border-color: #192537;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s ease; }
+
+.btn-primary:hover {
+  color: #fff;
+  font-weight: bold;
+  background-color: #2e4465;
+  border-color: #192537; }
+
+.btn-primary:after {
+  position: relative;
+  transition: left 0.4s ease; }
+
+.btn-primary:hover:after,
+.btn-primary:focus:after,
+.btn-primary:active:after {
+  left: 0.25rem; }
+
+/*Insertamos la caja blanca del boton principal*/
+.btn-primary:before {
+  content: "";
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  background: #2e4465;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: skew(45deg, 0);
+  transition: all 0.5s ease; }
+
+.btn-primary:hover:before,
+.btn-primary:focus:before,
+.btn-primary:active:before {
+  width: 130%;
+  left: -15%; }

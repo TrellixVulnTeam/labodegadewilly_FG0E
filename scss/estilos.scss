@@ -69,3 +69,53 @@ body {
   grid-area: $gridArea;
   display: flex;
 }
+
+.btn-primary {
+  color: $colorblanco;
+  background-color: $colorprimario;
+  border-color: $colorprimario;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+
+.btn-primary:hover {
+  color: $colorblanco;
+  font-weight: bold;
+  background-color: $colorprimarioclaro;
+  border-color: $colorprimario;
+}
+
+.btn-primary:after {
+  position: relative;
+  transition: left 0.4s ease;
+}
+
+.btn-primary:hover:after,
+.btn-primary:focus:after,
+.btn-primary:active:after {
+  left: 0.25rem;
+}
+
+/*Insertamos la caja blanca del boton principal*/
+
+.btn-primary:before {
+  content: "";
+  z-index: -1;
+  width: 0;
+  height: 100%;
+  background: $colorprimarioclaro;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: skew(45deg, 0);
+  transition: all 0.5s ease;
+}
+
+.btn-primary:hover:before,
+.btn-primary:focus:before,
+.btn-primary:active:before {
+  width: 130%;
+  left: -15%;
+}
