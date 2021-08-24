@@ -22,9 +22,9 @@
   <title>Seleccion de Vinos</title>
 </head>
 
-<body class="">
+<body class="container-fluid">
   <div class="contenedor__ventaProductos ">
-    <header class="header m-1" id="header">
+    <header class="header my-0 mx-0" id="header">
       <div class="container-fluid p-2">
         <div class="row d-flex align-items-center">
           <div class="col-6 col-md-3 order-1 order-md-0 text-start ps-sm-4">
@@ -36,10 +36,10 @@
           <div class="col-6 col-md-3 order-2 order-md-2 text-end pe-sm-4">
             <a href="https://instagram.com/labodegadewilly" target="_blank" rel="noopener noreferrer"
               class="text-decoration-none  lead"><i class="bi
-                              bi-instagram mx-1 lead"></i></a>
+                                bi-instagram mx-1 lead"></i></a>
             <a href="https://facebook.com/labodegadewilly" target="_blank" rel="noopener noreferrer"
               class="text-decoration-none  lead"><i class="bi bi-facebook mx-1"></i></a>
-            <a href="https://wa.me/3482318980/?text=tu%20texto%20personalizado" target="_blank"
+            <a href="https://wa.me/3482318980/?text=La%20Bodega%20de%20Willy%20-%20Disponible" target="_blank"
               rel="noopener noreferrer" class="text-decoration-none  lead"><i class="bi bi-whatsapp mx-1"></i></a>
 
           </div>
@@ -48,11 +48,10 @@
 
 
     </header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top ms-1 " id="menu">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top my-0 mx-0" id="menu">
       <div class="container-fluid justify-content-between">
-        <button class="navbar-toggler ps-2" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand ps-2" href="index.html">
@@ -60,10 +59,10 @@
             Willy</span>
         </a>
         <div class="d-md-inline-flex order-md-2 hover pe-2 pe-sm-4">
-          <a class="navbar-brand d-none d-md-block" href="#">
+          <a class="navbar-brand d-none d-md-block" data-bs-toggle="modal" data-bs-target="#buscar">
             <i class="bi bi-search icono px-1"></i></span>
           </a>
-          <a class="navbar-brand d-none d-md-block" href="Login.html">
+          <a class="navbar-brand d-none d-md-block" href="login.html">
             <i class="bi-person-circle icono px-1"></i></span>
           </a>
           <a class="navbar-brand" href="#">
@@ -89,11 +88,27 @@
             </li>
           </ul>
         </div>
-
     </nav>
+    <!-- modal de busqueda -->
+    <div class="modal fade" id="buscar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header text-primary">
+            <h5 class="modal-title" id="exampleModalLabel">¿Que estas Buscando?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex">
+            <input class="form-control me-2 bg-dark text-light" type="search" placeholder="Buscar en todo el sitio..."
+              aria-label="Search">
+            <button class="btn btn-primary" type="submit">Buscar</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
     <section id="barraLateral">
-      <div class="barraLateral m-1">
+      <div class="barraLateral mt-1">
         <div class="accordion accordion-flush d-sm-none" id="accordionExample">
           <button class="accordion-button d-sm-none" type="button" data-bs-toggle="collapse"
             data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -497,7 +512,7 @@
       </div>
     </section>
 
-    <section id="publicidad" class="publicidad m-1 d-none d-md-flex">
+    <section id="publicidad" class="publicidad d-none d-md-flex">
       <div class="mb-1">
         <img src="imagenes/publicidad/espumantes/espumantes-1.jpg" class="img-fluid"
           alt="Publicidad Champagne Septima" />
@@ -536,7 +551,7 @@
 
           </div>
           <div class="col-12 col-sm-3 ">
-            <a href="Login.html">FORMULARIO DE CONTACTO</a>
+            <a href="contacto.html">FORMULARIO DE CONTACTO</a>
 
           </div>
         </div>
@@ -554,7 +569,7 @@
           <div class="col-auto ">
             <a href="https://instagram.com/labodegadewilly" target="_blank" rel="noopener noreferrer"
               class="text-decoration-none text-white lead"><i class="bi
-                    bi-instagram mx-1"></i></a>
+                            bi-instagram mx-1"></i></a>
             <a href="https://facebook.com/labodegadewilly" target="_blank" rel="noopener noreferrer"
               class="text-decoration-none text-white lead"><i class="bi bi-facebook mx-1"></i></a>
 
@@ -566,9 +581,9 @@
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
           <div class="modal-content">
-            <div class="modal-header bg-primary w-100">
-              <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
-              <a class="navbar-brand ps-5 ms-5" href="index.html">
+            <div class="modal-header justify-content-between bg-primary w-100">
+
+              <a class="navbar-brand" href="index.html">
                 <img src="imagenes/logo2.svg" alt="" width="40" height="34"><span class="text-white navbar__titulo ">La
                   Bodega de
                   Willy</span>
@@ -616,13 +631,13 @@
         </div>
       </div>
       <!-- privacidad
-       -->
+               -->
       <div class="modal fade" id="politicas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header bg-primary w-100">
               <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
-              <a class="navbar-brand ps-5 ms-5" href="index.html">
+              <a class="navbar-brand " href="index.html">
                 <img src="imagenes/logo2.svg" alt="" width="40" height="34"><span class="text-white navbar__titulo ">La
                   Bodega de
                   Willy</span>
