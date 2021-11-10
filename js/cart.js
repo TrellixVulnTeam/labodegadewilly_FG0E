@@ -13,7 +13,7 @@ let cart = {};
 
 // Traigo el JSON con Fetch para immprimir las tarjetas
 const fetchData = async () => {
-  const res = await fetch("./json/productos.json");
+  const res = await fetch("json/productos.json");
   const data = await res.json();
   console.log(data);
   data.forEach((producto) => {
@@ -42,7 +42,7 @@ document.addEventListener("click", (e) => {
     filtroPorTipo(e.target.textContent);
   }
   if (e.target.matches("#js-todosLosProductos")) {
-    $.getJSON("../json/productos.json", (data) => {
+    $.getJSON("json/productos.json", (data) => {
       let dataDesdeJason = data;
       renderCardsHtml(dataDesdeJason, contenedorCards);
     });
@@ -252,7 +252,7 @@ document
   .addEventListener("keyup", filtrarProductos);
 // Función para filtrar los productos mientras se tipea
 function filtrarProductos() {
-  $.getJSON("../json/productos.json", (data) => {
+  $.getJSON("json/productos.json", (data) => {
     // console.log("Modo con jQuery:");
     let dataDesdeJason = data;
     // console.log(dataDesdeJason);
@@ -277,7 +277,7 @@ function filtrarProductos() {
 
 // Filtra productos productos
 function filtroPorTipo(fil) {
-  $.getJSON("../json/productos.json", (data) => {
+  $.getJSON("json/productos.json", (data) => {
     let dataDesdeJason = data;
     // console.log(fil);
     const filteredProducts = dataDesdeJason.filter((product) => {
