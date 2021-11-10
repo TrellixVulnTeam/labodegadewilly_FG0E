@@ -7565,7 +7565,7 @@ body {
   .contenedor__ventaProductos {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "cabecera cabecera cabecera cabecera cabecera" "menu menu menu menu menu" "barralateral zonaProductos zonaProductos zonaProductos publicidad" "footer footer footer footer footer"; } }
+    grid-template-areas: "cabecera cabecera cabecera cabecera cabecera" "menu menu menu menu menu" "barralateral zonaProductos zonaProductos zonaProductos zonaProductos" "footer footer footer footer footer"; } }
 
 .header {
   font-family: "Roboto", sans-serif;
@@ -7616,14 +7616,14 @@ body {
       color: #b09e80; }
     .navbar .navbar-brand .texto {
       position: relative;
-      top: -12px;
-      left: 3px;
+      top: -8px;
+      left: 5px;
       color: #fff;
       margin-left: -1rem;
       background-color: red;
       padding: 0.5px 2px;
       border-radius: 5px;
-      font-size: 0.7rem; }
+      font-size: 1rem; }
   .navbar .navbar__a a {
     background-color: #192537;
     margin: 0 0.25rem;
@@ -7941,25 +7941,6 @@ body {
         justify-content: center;
         flex-direction: column;
         text-align: center; }
-        .contenedorcards .cards .contenido .detalles .iconos {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          margin-top: 5px; }
-          .contenedorcards .cards .contenido .detalles .iconos li {
-            list-style: none;
-            margin: 4px; }
-            .contenedorcards .cards .contenido .detalles .iconos li a {
-              width: 30px;
-              height: 30px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 1rem;
-              color: #fff;
-              font-weight: lighter;
-              text-decoration: none;
-              transition: 0.3s; }
         .contenedorcards .cards .contenido .detalles h2, .contenedorcards .cards .contenido .detalles .h2 {
           color: white;
           font-size: 1.2em;
@@ -7993,7 +7974,7 @@ body {
       flex-direction: column-reverse;
       align-items: center; }
       .contenedorcards .cards .nombreyprecio .tipodevino {
-        font-size: 12px;
+        font-size: 14px;
         color: white; }
       .contenedorcards .cards .nombreyprecio .fondo {
         font-family: "Cinzel", serif;
@@ -8023,7 +8004,7 @@ body {
   transform: translateY(1px) scale(0.85); }
 
 .contenedorcards .cards:hover .contenido {
-  transform: translateY(-5%); }
+  transform: translateY(-10%); }
 
 .iconos li a:hover {
   transform: scale(1.4); }
@@ -8257,25 +8238,6 @@ body {
         justify-content: center;
         flex-direction: column;
         text-align: center; }
-        .contenedorcards .cards .contenido .detalles .iconos {
-          position: relative;
-          display: flex;
-          justify-content: center;
-          margin-top: 5px; }
-          .contenedorcards .cards .contenido .detalles .iconos li {
-            list-style: none;
-            margin: 4px; }
-            .contenedorcards .cards .contenido .detalles .iconos li a {
-              width: 30px;
-              height: 30px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 1rem;
-              color: #fff;
-              font-weight: lighter;
-              text-decoration: none;
-              transition: 0.3s; }
         .contenedorcards .cards .contenido .detalles h2, .contenedorcards .cards .contenido .detalles .h2 {
           color: white;
           font-size: 1.2em;
@@ -8309,7 +8271,7 @@ body {
       flex-direction: column-reverse;
       align-items: center; }
       .contenedorcards .cards .nombreyprecio .tipodevino {
-        font-size: 12px;
+        font-size: 14px;
         color: white; }
       .contenedorcards .cards .nombreyprecio .fondo {
         font-family: "Cinzel", serif;
@@ -8339,7 +8301,7 @@ body {
   transform: translateY(1px) scale(0.85); }
 
 .contenedorcards .cards:hover .contenido {
-  transform: translateY(-5%); }
+  transform: translateY(-10%); }
 
 .iconos li a:hover {
   transform: scale(1.4); }
@@ -8412,6 +8374,32 @@ body {
     background-color: #2e4465; }
   .barraLateral .scrollarea {
     overflow-y: auto; }
+
+.AddToCartModal img {
+  height: 150px; }
+
+.AddToCartModal .titulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+.AddToCartModal .btn-primary,
+.AddToCartModal .btn-secondary,
+.AddToCartModal .btn-danger {
+  font-size: 16px;
+  font-weight: bold; }
+
+.AddToCartModal .marcaProducto {
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase; }
+
+.AddToCartModal .cantidadProductos {
+  display: flex;
+  height: 40px;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
 
 .footer {
   padding-top: 1rem;

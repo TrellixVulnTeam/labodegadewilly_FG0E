@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Vino",
+    "marca": "Los Alamos",
+    "img": "imagenes/vinos/vino-malbec-alamos.jpg",
+    "tipo": "Tinto",
+    "varietal": "Cabernet",
+    "envase": "750ml",
+    "precio": 550
+  },
+  {
+    "id": 2,
+    "name": "Vino",
+    "marca": "Septima Obra",
+    "img": "imagenes/vinos/vino-blanco-chardonnay-septimaobra.jpg",
+    "tipo": "Blanco",
+    "varietal": "Chardonnay",
+    "envase": "750ml",
+    "precio": 595
+  },
+  {
+    "id": 3,
+    "name": "Vino",
+    "marca": "La Linda",
+    "img": "imagenes/vinos/vino-malbec-lalinda.jpg",
+    "tipo": "Tinto",
+    "varietal": "Malbec",
+    "envase": "750ml",
+    "precio": 620
+  },
+  {
+    "id": 4,
+    "name": "Vino",
+    "marca": "La Linda",
+    "img": "imagenes/vinos/vino-rosado-lalinda.jpg",
+    "tipo": "Rosado",
+    "varietal": "Rose",
+    "envase": "750ml",
+    "precio": 715
+  },
+  {
+    "id": 5,
+    "name": "Vino",
+    "marca": "Septima",
+    "img": "imagenes/vinos/vino-blanco-suavignonblanc.jpg",
+    "tipo": "Blanco",
+    "varietal": "Suav. Blanc",
+    "envase": "750ml",
+    "precio": 675
+  },
+  {
+    "id": 6,
+    "name": "Vino",
+    "marca": "Uxmal",
+    "img": "imagenes/vinos/vino-malbec-uxmal.jpg",
+    "tipo": "Tinto",
+    "varietal": "Malbec",
+    "envase": "750ml",
+    "precio": 400
+  },
+  {
+    "id": 7,
+    "name": "Vino",
+    "marca": "Trumpeter",
+    "img": "imagenes/vinos/vino-rosado-trumpeter.jpg",
+    "tipo": "Rosado",
+    "varietal": "Rose",
+    "envase": "750ml",
+    "precio": 715
+  }
+]

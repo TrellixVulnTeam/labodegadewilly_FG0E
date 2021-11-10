@@ -23,6 +23,59 @@
 </head>
 
 <body class="container-fluid">
+
+
+
+  <template id="js-templateCart">
+    <div class="row border-bottom AddToCartModal">
+      <div class="col-3 productoAgregado text-center ">
+        <img id="imgProductoCart" src="/imagenes/vinos/vino-cabernet-nicasia.jpg" alt="" srcset="" class="mx-auto">
+      </div>
+      <div class="col-9">
+        <p class="modal-title marcaProducto text-primary"><span id="idProducto" class="d-none"></span><span
+            class="nameProduct fw-bold " id="nameProduct">nombre</span> - <span id="marcaProducto"
+            class="marcaProducto"></span>
+        </p>
+        <p class="mb-0 fw-bold"><span id="tipoProducto"></span> - <span class="fw-bold" id="varietalProducto"></span>
+        </p>
+        <div class="cantidadProductos ">
+
+          <span class="mt-4 mb-4 ">Cantidad: <span id="cantidadProducto" class="me-2 fw-bold "> 2
+            </span></span>
+          <a class="btn btn-primary btn-sm ms-4 ">
+            +
+          </a>
+          <a class="btn btn-secondary btn-sm ms-1">
+            -
+          </a>
+          <a class="btn btn-danger btn-sm ms-1">
+            x
+          </a>
+        </div>
+        <p class="mt-2 mb-0 text-decoration-underline">Precio x Unidad: <span class="fw-bold"> $</span><span id="precio"
+            class="fw-bold">700</span></p>
+        <p class="mt-1">Total: $<span id="precioXCantidad" class="fw-bold">700</span></p>
+      </div>
+    </div>
+  </template>
+
+
+  <template id="js-templateFooter">
+
+    <h5 class="modal-title fw-bold" id="staticBackdropLabel">Total de la compra: <span id="totalDeLaCompra"></span>
+      <p id="cantidadDeProductos"></p>
+    </h5>
+    <div class="modal-footer">
+
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
+      <button type="button" id="js-EmptyCart" class="btn btn-primary">Vaciar Carro</button>
+  </template>
+
+
+
+
+
+
   <div class="contenedor__ventaProductos ">
     <header class="header my-0 mx-0" id="header">
       <div class="container-fluid p-2">
@@ -48,6 +101,7 @@
 
 
     </header>
+
     <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top my-0 mx-0" id="menu">
       <div class="container-fluid justify-content-between">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -60,326 +114,76 @@
             Willy</span>
         </a>
         <div class="d-md-inline-flex order-md-2 hover pe-2 pe-sm-4">
-          <a class="navbar-brand d-none d-md-block" data-bs-toggle="modal" data-bs-target="#buscar">
-            <i class="bi bi-search icono px-1"></i></span>
-          </a>
+
           <a class="navbar-brand d-none d-md-block" href="login.html">
             <i class="bi-person-circle icono px-1"></i></span>
           </a>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" data-bs-toggle="modal" data-bs-target="#js-carro">
             <i class="bi bi-cart3 icono px-1"></i></span>
           </a>
           <a class="navbar-brand" href="#">
-            <span class="texto">+2</span>
+            <span class="texto" id="js-AddedToCart">0</span>
           </a>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <li class="nav-item  ">
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="vinos.html">Vinos</a>
+            <li class="nav-item ">
+              <a class="nav-link" href="vinos.html" id="js-filtrarVinos">Vinos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="espumantes.html">Espumantes</a>
+            <li class="nav-item ">
+              <a class="nav-link" href="espumantes.html" id="js-filtrarEspumantes">Espumantes</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="destilados.html">Destilados</a>
+            <li class="nav-item ">
+              <a class=" nav-link" href="destilados.html" id="js-filtrarDestilados">Destilados</a>
+            </li>
+            <li class="nav-item ">
+
+              <input id="js-buscarProducto" class="form-control ms-sm-2  bg-dark text-light" type="search"
+                placeholder=" Buscar en todo el sitio..." aria-label="Search">
+              </span>
+
             </li>
           </ul>
         </div>
     </nav>
-    <!-- modal de busqueda -->
-    <div class="modal fade" id="buscar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <!-- modal de Carrito -->
+
+    <div class="modal " id="js-carro" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header text-primary">
-            <h5 class="modal-title" id="exampleModalLabel">¿Que estas Buscando?</h5>
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body d-flex">
-            <input class="form-control me-2 bg-dark text-light" type="search" placeholder="Buscar en todo el sitio..."
-              aria-label="Search">
-            <button class="btn btn-primary" type="submit">Buscar</button>
+          <div class="modal-body" id="js-itemsCart">
+            <!-- Contenido de productos del carrito -->
           </div>
 
+          <div id="js-cartFooter">
+            <!-- Contenido de precio total -->
+          </div>
         </div>
+
       </div>
+
     </div>
+
+
+
     <section id="barraLateral">
-      <div class="barraLateral mt-1">
-        <div class="accordion accordion-flush d-sm-none" id="accordionExample">
-          <button class="accordion-button d-sm-none" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            aplicar filtros
-          </button>
-          <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
-            <div id="listadefiltro " class="collapse show">
-              <ul class="list-unstyled ps-0 text-white">
-
-                <li class="mb-1">
-                  <button class="btn-toggle align-items-center collapsed" data-bs-toggle="collapse"
-                    data-bs-target="#home-collapse" aria-expanded="false">
-                    tipo de vino
-                  </button>
-                  <div class="collapse" id="home-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                      <li class="ps-5">
-                        <div class="form-check">
-                          <input class="form-check-input  " type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label ms-2" for="defaultCheck1">
-                            Tinto
-                          </label>
-                        </div>
-                      </li>
-                      <li class="ps-5">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label ms-2" for="defaultCheck1">
-                            Blanco
-                          </label>
-                      </li>
-                      <li class="ps-5">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label ms-2" for="defaultCheck1">
-                            Rosado
-                          </label>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="border-top my-1"></li>
-                <li class="mb-1">
-                  <button class="btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                    data-bs-target="#dashboard-collapse" aria-expanded="false">
-                    varietal
-                  </button>
-                  <div class="collapse " id="dashboard-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                      <li class="ps-5">
-                        <div class="form-check">
-                          <input class="form-check-input  " type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label ms-2" for="defaultCheck1">
-                            Malbec
-                          </label>
-                        </div>
-                      </li>
-                      <li class="ps-5">
-                        <div class="form-check">
-                          <input class="form-check-input  " type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label ms-2" for="defaultCheck1">
-                            Cabernet
-                          </label>
-                        </div>
-                      </li>
-                      <li class="ps-5">
-                        <div class="form-check">
-                          <input class="form-check-input  " type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label ms-2" for="defaultCheck1">
-                            Syrah
-                          </label>
-                        </div>
-                      </li>
-                      <li class="ps-5">
-                        <div class="form-check">
-                          <input class="form-check-input  " type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label ms-2" for="defaultCheck1">
-                            Blend
-                          </label>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="border-top my-1"></li>
-                <li class="mb-1">
-                  <button class="btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                    data-bs-target="#orders-collapse" aria-expanded="false">
-                    bodega
-                  </button>
-                  <div class="collapse" id="orders-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                      <li class="ps-5">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label ms-2" for="defaultCheck1">
-                            Bodega Séptima
-                          </label>
-                        </div>
-                      </li>
-                      <li class="ps-5">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                          <label class="form-check-label ms-2" for="defaultCheck2">
-                            Bodega La Linda
-                          </label>
-                        </div>
-                      </li>
-                      <li class="ps-5">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                          <label class="form-check-label ms-2" for="defaultCheck3">
-                            Bodega Rutini Wines
-                          </label>
-                        </div>
-                      </li>
-                      <li class="ps-5">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                          <label class="form-check-label ms-2" for="defaultCheck3">
-                            Bodega Los Alamos
-                          </label>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="border-top my-1"></li>
-            </div>
-            </ul>
-          </div>
-        </div>
-
-
-
-        <div id="listadefiltro " class="collapse show d-none d-sm-block m-0">
-          <ul class="list-unstyled ps-0 text-white">
-            <li class="my-1 text-center texto-filtro">aplicar filtros</li>
-            <li class="border-top my-1"></li>
-            <li class="mb-1">
-              <button class="btn-toggle align-items-center collapsed" data-bs-toggle="collapse"
-                data-bs-target="#home-collapse" aria-expanded="false">
-                tipo de vino
-              </button>
-              <div class="collapse " id="home-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li class="ps-5">
-                    <div class="form-check">
-                      <input class="form-check-input  " type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label ms-2" for="defaultCheck1">
-                        Tinto
-                      </label>
-                    </div>
-                  </li>
-                  <li class="ps-5">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label ms-2" for="defaultCheck1">
-                        Blanco
-                      </label>
-                  </li>
-                  <li class="ps-5">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label ms-2" for="defaultCheck1">
-                        Rosado
-                      </label>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="border-top my-1"></li>
-            <li class="mb-1">
-              <button class="btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                data-bs-target="#dashboard-collapse" aria-expanded="false">
-                varietal
-              </button>
-              <div class="collapse " id="dashboard-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li class="ps-5">
-                    <div class="form-check">
-                      <input class="form-check-input  " type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label ms-2" for="defaultCheck1">
-                        Malbec
-                      </label>
-                    </div>
-                  </li>
-                  <li class="ps-5">
-                    <div class="form-check">
-                      <input class="form-check-input  " type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label ms-2" for="defaultCheck1">
-                        Cabernet
-                      </label>
-                    </div>
-                  </li>
-                  <li class="ps-5">
-                    <div class="form-check">
-                      <input class="form-check-input  " type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label ms-2" for="defaultCheck1">
-                        Syrah
-                      </label>
-                    </div>
-                  </li>
-                  <li class="ps-5">
-                    <div class="form-check">
-                      <input class="form-check-input  " type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label ms-2" for="defaultCheck1">
-                        Blend
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="border-top my-1"></li>
-            <li class="mb-1">
-              <button class="btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
-                data-bs-target="#orders-collapse" aria-expanded="false">
-                bodega
-              </button>
-              <div class="collapse" id="orders-collapse">
-                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li class="ps-5">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label ms-2" for="defaultCheck1">
-                        Bodega Séptima
-                      </label>
-                    </div>
-                  </li>
-                  <li class="ps-5">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                      <label class="form-check-label ms-2" for="defaultCheck2">
-                        Bodega La Linda
-                      </label>
-                    </div>
-                  </li>
-                  <li class="ps-5">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                      <label class="form-check-label ms-2" for="defaultCheck3">
-                        Bodega Rutini Wines
-                      </label>
-                    </div>
-                  </li>
-                  <li class="ps-5">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                      <label class="form-check-label ms-2" for="defaultCheck3">
-                        Bodega Los Alamos
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="border-top my-1"></li>
-        </div>
-        </ul>
-      </div>
 
       <div class="mb-1 me-1 ms-1 d-none d-sm-flex">
         <img src="imagenes/publicidad/vinos/vinos-1.jpg" class="img-fluid" alt="Publicidad Los Alamos Reserva">
       </div>
       <div class="mb-1 me-1 ms-1 d-none d-sm-flex">
-        <img src="imagenes/publicidad/vinos/vinos-2.jpg" class="img-fluid d-xxl-none" alt="Publicidad Bodega Trumpeter">
+        <img src="imagenes/publicidad/vinos/vinos-2.jpg" class="img-fluid " alt="Publicidad Bodega Trumpeter">
       </div>
       <div class="mb-1 me-1 ms-1 d-none d-sm-flex">
-        <img src="imagenes/publicidad/vinos/vinos-4.jpg" class="img-fluid d-xxl-none" alt="Publicidad Vinos Nicasia">
+        <img src="imagenes/publicidad/vinos/vinos-4.jpg" class="img-fluid " alt="Publicidad Vinos Nicasia">
       </div>
       <div class="mb-1 me-1 ms-1 d-none d-sm-flex">
         <img src="imagenes/publicidad/vinos/vinos-5.jpg" class="img-fluid d-xxl-none" alt="Publicidad Vinos Nicasia">
@@ -387,296 +191,13 @@
     </section>
 
     <section id="galeriaProductos" class="contenedorflex mt-1 mb-1">
-      <div class="contenedorcards">
-        <div class="cards">
-          <div class="descuento">
-            <p><span>15%</span></p>
-          </div>
-          <div class="imgBx">
-            <img src="imagenes/vinos/vino-malbec-alamos.jpg" alt="Tinto Malbec Los Alamos 750ml"
-              title="Tinto Malbec Los Alamos 750ml">
-          </div>
-          <div class="nombreyprecio ">
-            <h5><span class="precioviejo">$550</span><span>-</span> <span class="preciocondescuento">$468</span></h5>
-            <h5 class="tipodevino">Tinto - Malbec - 750ml</h5>
-            <h5 class="fondo">Los Alamos</h5>
-          </div>
-          <div class="contenido">
-            <div class="detalles">
-              <ul class="iconos">
-                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
-                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
-                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="cards">
-          <div class="descuento">
-            <p><span>35%</span></p>
-          </div>
-          <div class="imgBx">
-            <img src="imagenes/vinos/vino-blanco-chardonnay-septimaobra.jpg" title="Blanco Chardonnay Septima 750ml"
-              alt="Blanco Chardonnay Septima 750ml">
-          </div>
-          <div class="nombreyprecio ">
-            <h5><span class="precioviejo">$850</span><span>-</span> <span class="preciocondescuento">$595</span></h5>
-            <h5 class="tipodevino">Blanco - Chardonnay - 750ml</h5>
-            <h5 class="fondo">Septima Obra</h5>
-          </div>
-          <div class="contenido">
-            <div class="detalles">
-              <ul class="iconos">
-                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
-                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
-                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="cards">
-          <div class="descuento">
-            <p><span>35%</span></p>
-          </div>
-          <div class="imgBx">
-            <img src="imagenes/vinos/vino-malbec-lalinda.jpg" title="Tinto Malbec La Linda 750ml"
-              alt="Tinto Malbec La Linda 750ml">
-          </div>
-          <div class="nombreyprecio ">
-            <h5><span class="precioviejo">$850</span><span>-</span> <span class="preciocondescuento">$595</span></h5>
-            <h5 class="tipodevino">Tinto - Malbec - 750ml</h5>
-            <h5 class="fondo">La Linda</h5>
-          </div>
-          <div class="contenido">
-            <div class="detalles">
-              <ul class="iconos">
-                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
-                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
-                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="cards">
-          <div class="descuento">
-          </div>
-          <div class="imgBx">
-            <img src="imagenes/vinos/vino-malbec-trumpeter.jpg" alt="Tinto Malbec Trumpeter 750ml"
-              title="Tinto Malbec Trumpeter 750ml">
-          </div>
-          <div class="nombreyprecio ">
-            <h5><span class="preciocondescuento">$615</span></h5>
-            <h5 class="tipodevino">Tinto - Malbec - 750ml</h5>
-            <h5 class="fondo">Trumpeter</h5>
-          </div>
-          <div class="contenido">
-            <div class="detalles">
-              <ul class="iconos">
-                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
-                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
-                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="cards">
-          <div class="descuento">
-            <p><span>35%</span></p>
-          </div>
-          <div class="imgBx">
-            <img src="imagenes/vinos/vino-malbec-trumpeter-reserva.jpg" alt="Tinto Malbec Trumpeter Reserva"
-              title="Tinto Malbec Trumpeter Reserva">
-          </div>
-          <div class="nombreyprecio">
-            <h5><span class="precioviejo">$1000</span><span>-</span> <span class="preciocondescuento">$600</span></h5>
-            <h5 class="tipodevino">Tinto - Malbec - 750ml</h5>
-            <h5 class="fondo">Trumpeter Reserva</h5>
-          </div>
-          <div class="contenido">
-            <div class="detalles">
-              <ul class="iconos">
-                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
-                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
-                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="cards">
-          <div class="descuento">
-            <p><span>25%</span></p>
-          </div>
-          <div class="imgBx">
-            <img src="imagenes/vinos/vino-cabernet-septimaobra-reserva.jpg" alt="Tinto Malbec Séptima Obra Reserva"
-              title="Tinto Malbec Séptima Obra Reserva">
-          </div>
-          <div class="nombreyprecio ">
-            <h5><span class="precioviejo">$790</span><span>-</span> <span class="preciocondescuento">$500</span></h5>
-            <h5 class="tipodevino">Malbec - 750ml</h5>
-            <h5 class="fondo">Séptima Obra</h5>
-          </div>
-          <div class="contenido">
-            <div class="detalles">
-              <ul class="iconos">
-                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
-                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
-                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="cards">
-          <div class="descuento">
-            <p><span>35%</span></p>
-          </div>
-          <div class="imgBx">
-            <img src="imagenes/vinos/vino-blanco-chardonnay-trumpeter.jpg" alt="Vino Blanco Chardonnay Trumpeter"
-              title="Vino Blanco Chardonnay Trumpeter">
-          </div>
-          <div class="nombreyprecio ">
-            <h5><span class="precioviejo">$1029</span><span>-</span> <span class="preciocondescuento">$668</span></h5>
-            <h5 class="tipodevino">Blanco - Chardonnay - 750ml</h5>
-            <h5 class="fondo">Trumpeter</h5>
-          </div>
-          <div class="contenido">
-            <div class="detalles">
-              <ul class="iconos">
-                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
-                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
-                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="cards">
-          <div class="descuento">
-            <p><span>30%</span></p>
-          </div>
-          <div class="imgBx">
-            <img src="imagenes/vinos/vino-cabernet-nicasia.jpg" alt="Vino Tinto Cabernet Franc Nicasia"
-              title="Vino Tinto Cabernet Franc Nicasia">
-          </div>
-          <div class="nombreyprecio ">
-            <h5><span class="precioviejo">$1200</span><span>-</span> <span class="preciocondescuento">$900</span></h5>
-            <h5 class="tipodevino">Tinto - Cabernet Franc - 750ml</h5>
-            <h5 class="fondo">Nicasia</h5>
-          </div>
-          <div class="contenido">
-            <div class="detalles">
-              <ul class="iconos">
-                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
-                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
-                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="cards">
+      <div class="contenedorcards" id="js-contenedorCards">
 
-          <div class="imgBx">
-            <img src="imagenes/vinos/vino-rosado-lalinda.jpg" alt="Vino Rosado Malbec La Linda 750ml"
-              title="Vino Rosado Malbec La Linda 750ml">
-          </div>
-          <div class="nombreyprecio ">
-            <h5><span class="precioviejo"><span class="preciocondescuento">$525</span></h5>
-            <h5 class="tipodevino">Rosado - Malbec - 750ml</h5>
-            <h5 class="fondo">La Linda</h5>
-          </div>
-          <div class="contenido">
-            <div class="detalles">
-              <ul class="iconos">
-                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
-                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
-                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="cards">
-          <div class="descuento">
-            <p><span>35%</span></p>
-          </div>
-          <div class="imgBx">
-            <img src="imagenes/vinos/vino-rosado-trumpeter.jpg" alt="Vino Blanco Chardonnay Trumpeter"
-              title="Vino Blanco Chardonnay Trumpeter">
-          </div>
-          <div class="nombreyprecio ">
-            <h5><span class="precioviejo">$1172</span><span>-</span> <span class="preciocondescuento">$761</span></h5>
-            <h5 class="tipodevino">Rosado - Reserva - 750ml</h5>
-            <h5 class="fondo">Trumpeter</h5>
-          </div>
-          <div class="contenido">
-            <div class="detalles">
-              <ul class="iconos">
-                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
-                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
-                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="cards d-xxl-none">
-
-          <div class="imgBx">
-            <img src="imagenes/vinos/vino-malbec-uxmal.jpg" alt="Vino Tinto Malbec Uxmal"
-              title="Vino Tinto Malbec Uxmal">
-          </div>
-          <div class="nombreyprecio ">
-            <h5><span class="preciocondescuento">$350</span></h5>
-            <h5 class="tipodevino">Tinto - Malbec - 750ml</h5>
-            <h5 class="fondo">Uxmal</h5>
-          </div>
-          <div class="contenido">
-            <div class="detalles">
-              <ul class="iconos">
-                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
-                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
-                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="cards d-xxl-none">
-
-          <div class="imgBx">
-            <img src="imagenes/vinos/vino-cabernet-bravio.jpg" alt="Vino Tinto Cabernet Bravio"
-              title="Vino Tinto Cabernet Bravio">
-          </div>
-          <div class="nombreyprecio ">
-            <h5><span class="preciocondescuento">$374</span></h5>
-            <h5 class="tipodevino">Tinto - Cabernet - 750ml</h5>
-            <h5 class="fondo">Bravio</h5>
-          </div>
-          <div class="contenido">
-            <div class="detalles">
-              <ul class="iconos">
-                <li><a href=""><i title="Agregar Favorito" class="bi bi-suit-heart-fill"></i></a></li>
-                <li><a href=""><i title="Agregar al carro de Compras" class="bi bi-cart3"></i></a></li>
-                <li><a href=""><i title="Info sobre el Producto" class="bi bi-plus-square"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
+
     </section>
 
-    <section id="publicidad" class="publicidad d-none d-lg-flex">
-      <div class="mb-1">
-        <img src="imagenes/publicidad/vinos/vinos-4.jpg" class="img-fluid" alt="Publicidad Vinos Nicasia" />
-      </div>
-      <div class="mb-1">
-        <img src="imagenes/publicidad/vinos/vinos-2.jpg" class="img-fluid" alt="Publicidad Bodega Trumpeter" />
-      </div>
-      <div class="mb-1 d-xxl-none">
-        <img src="imagenes/publicidad/vinos/vinos-3.jpg" class="img-fluid" alt="Publicidad Bodega Septima Reserva" />
-      </div>
 
-      <div class="mb-1 d-xxl-none mb-1">
-        <img src="imagenes/publicidad/vinos/vinos-7.jpg" class="img-fluid" alt="Publicidad Vinos Uxmal" />
-      </div>
-
-
-    </section>
 
     <footer id="footer" class="">
       <div class="container-fluid footer pt-5">
@@ -691,7 +212,8 @@
         </div>
         <div class="row text-center justify-content-center ">
           <div class="col-12 col-sm-3 offset-sm-auto">
-            <a href="" class="" data-bs-toggle="modal" data-bs-target="#terminosycondiciones">TERMINOS Y CONDICIONES</a>
+            <a href="" class="" data-bs-toggle="modal" data-bs-target="#terminosycondiciones">TERMINOS Y
+              CONDICIONES</a>
           </div>
           <div class="col-12 col-sm-3  ">
             <a href="" class="" data-bs-toggle="modal" data-bs-target="#politicas">POLITICA DE PRIVACIDAD</a>
@@ -738,17 +260,20 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body ">
-              <h5 class="text-center mb-2">Bebidas alcohólicas. Beber con moderación. Prohibida la venta a menores de 18
+              <h5 class="text-center mb-2">Bebidas alcohólicas. Beber con moderación. Prohibida la venta a menores de
+                18
                 años.</h5>
               <p>Precios IVA incluido. Precios y cosechas sujetos a modificación sin previo aviso.
                 Las fotos y descripciones son de carácter ilustrativo.
-                Ante falta de stock de algún producto, el mismo será reemplazado por otro similar de igual o mayor valor
+                Ante falta de stock de algún producto, el mismo será reemplazado por otro similar de igual o mayor
+                valor
                 comercial. Las
                 promociones no son acumulables ni combinables con otras excepto que lo aclare en la promoción.</p>
               <h5 class="text-center mb-2">Pagos y Precios</h5>
               <p>La información sobre productos y precios está sujeta a cambios sin previo aviso. Todos los precios
                 expresados en el
-                Sitio incluyen IVA, salvo que se indique lo contrario. Todos los precios en el Sitio están expresados en
+                Sitio incluyen IVA, salvo que se indique lo contrario. Todos los precios en el Sitio están expresados
+                en
                 pesos
                 argentinos, moneda de curso legal de la República Argentina.
 
@@ -799,7 +324,8 @@
                 acceso no autorizado
                 y/o robo de los Datos Personales suministrados por el Usuario a Siete Spirits. Sin perjuicio de lo
                 expresado en el
-                presente, el Usuario acepta y reconoce que las medidas de seguridad en Internet no son inviolables. Toda
+                presente, el Usuario acepta y reconoce que las medidas de seguridad en Internet no son inviolables.
+                Toda
                 información
                 suministrada será tratada por Grand Cru S.A. conforme términos previstos en la Ley Nacional de
                 Protección de Datos
@@ -839,7 +365,8 @@
     })()
 
   </script>
-
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="/js/cart.js"></script>
 </body>
 
 </html>
