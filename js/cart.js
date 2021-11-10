@@ -1,5 +1,4 @@
-const urlProductos = "./json/productos.json";
-
+//Traigo Los elementos que voy a utilizar en la programación desde el HTML
 const contenedorCards = document.getElementById("js-contenedorCards");
 const templateFooter = document.getElementById("js-templateFooter").content;
 const templateCart = document.getElementById("js-templateCart").content;
@@ -7,8 +6,12 @@ const itemsCart = document.getElementById("js-itemsCart");
 const cartFooter = document.getElementById("js-cartFooter");
 const fragment = document.createDocumentFragment();
 const buscarProducto = document.getElementById("js-buscarProducto");
+const barraMenu = document.getElementById("navbar");
+
+// Inicio el carro como un objeto vacio
 let cart = {};
 
+// Traigo el JSON con Fetch para immprimir las tarjetas
 const fetchData = async () => {
   const res = await fetch("./json/productos.json");
   const data = await res.json();
@@ -18,6 +21,7 @@ const fetchData = async () => {
   });
 };
 
+// A la carga del DOM ejecuto el Fetch y genero la Key en el LocalStorage
 document.addEventListener("DOMContentLoaded", () => {
   fetchData();
   if (localStorage.getItem("cartKey")) {
@@ -26,14 +30,40 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-contenedorCards.addEventListener("click", (e) => {
-  addToCart(e);
+//Manejo de los eventos del click
+document.addEventListener("click", (e) => {
+  if (e.target.matches("#js-filtrarVinos")) {
+    filtroPorTipo(e.target.textContent);
+  }
+  if (e.target.matches("#js-filtrarEspumantes")) {
+    filtroPorTipo(e.target.textContent);
+  }
+  if (e.target.matches("#js-filtrarDestilados")) {
+    filtroPorTipo(e.target.textContent);
+  }
+  if (e.target.matches("#js-todosLosProductos")) {
+    $.getJSON("../json/productos.json", (data) => {
+      let dataDesdeJason = data;
+      renderCardsHtml(dataDesdeJason, contenedorCards);
+    });
+  }
+  if (e.target.matches("#js-buyCart")) {
+    console.log("Gracias Por su Compra");
+    finalizarCompra();
+  }
+  if (e.target.matches("#js-contenedorCards")) {
+    addToCart(e);
+  }
+  if (e.target.matches("#js-itemsCart")) {
+    btnSumarYRestar(e);
+  }
 });
 
-itemsCart.addEventListener("click", (e) => {
-  btnSumarYRestar(e);
-});
+const finalizarCompra = () => {
+  alert(`Gracias Por su compra`);
+};
 
+//Template de Card que toma el JSON para crear cada tarjeta del producto
 const templateCardHTML = ({
   id,
   name,
@@ -62,34 +92,7 @@ const templateCardHTML = ({
         </div>`;
 };
 
-document
-  .getElementById("js-buscarProducto")
-  .addEventListener("keyup", filtrarProductos);
-
-function filtrarProductos() {
-  $.getJSON("../json/productos.json", (data) => {
-    // console.log("Modo con jQuery:");
-    let dataDesdeJason = data;
-    // console.log(dataDesdeJason);
-
-    const buscarProductoValue = buscarProducto.value;
-    const filteredProducts = dataDesdeJason.filter((product) => {
-      const productNameLowerCase = product.marca.toLowerCase();
-      // console.log(productNameLowerCase);
-      const productVarietalLowerCase = product.varietal.toLowerCase();
-      const productTipoLowerCase = product.tipo.toLowerCase();
-
-      const isFiltered =
-        productNameLowerCase.includes(buscarProductoValue.toLowerCase()) ||
-        productVarietalLowerCase.includes(buscarProductoValue.toLowerCase()) ||
-        productTipoLowerCase.includes(buscarProductoValue.toLowerCase());
-
-      return isFiltered;
-    });
-    renderCardsHtml(filteredProducts, contenedorCards);
-  });
-}
-
+//Imprimo las tarjetas en el HTML
 const renderCardsHtml = (products, container) => {
   container.innerHTML = "";
   if (products.length > 0) {
@@ -99,10 +102,11 @@ const renderCardsHtml = (products, container) => {
       container.innerHTML += cardHTML;
     }
   } else {
-    container.innerHTML = `<h2>No se encontro ningun producto</h2>`;
+    container.innerHTML = `<h2 class="fw-bold text-white">No se encontro ningún producto</h2>`;
   }
 };
 
+// Agrego los productos seleccionados al carrito
 let addToCart = (e) => {
   if (e.target.classList.contains("agregarAlCarro")) {
     console.log(e);
@@ -111,6 +115,7 @@ let addToCart = (e) => {
   e.stopPropagation();
 };
 
+// Seteo el producto agregado para armar la Card en la ventana modal del Carro
 const setCart = (objeto) => {
   const producto = {
     id: objeto.querySelector(".idProduct").textContent,
@@ -124,6 +129,7 @@ const setCart = (objeto) => {
     cantidad: 1,
   };
 
+  // Si el producto clickeado ya esta agregado al carrit, no lo repite, solo aumenta la cantidad.
   if (cart.hasOwnProperty(producto.id)) {
     producto.cantidad = cart[producto.id].cantidad + 1;
   }
@@ -132,6 +138,7 @@ const setCart = (objeto) => {
   printCart();
 };
 
+// imprimo la tarjeta de cada producto que se agrega en el Carrito
 function printCart() {
   itemsCart.innerHTML = ""; //limpio el html para que no se me repitan los productos ya agregados cada vez que agrego uno nuevo
 
@@ -165,11 +172,12 @@ function printCart() {
   localStorage.setItem("cartKey", JSON.stringify(cart));
 }
 
+// imprimo el pie de pagina de la Ventana Modal del Carrito
 function pintarFooter() {
   cartFooter.innerHTML = "";
   if (Object.keys(cart).length === 0) {
     cartFooter.innerHTML = `
-        <p class="text-primary">Carrito vacío con innerHTML</>
+        <p class="text-primary fw-bold text-center">Su carro esta Vacio</>
         `;
     return;
   }
@@ -179,11 +187,13 @@ function pintarFooter() {
     (acc, { cantidad }) => acc + cantidad,
     0
   );
+
   const PrecioPorCantidad = Object.values(cart).reduce(
     (acc, { cantidad, precio }) => acc + cantidad * precio,
     0
   );
-  templateFooter.querySelectorAll("#tcantidadDeProductos").textContent =
+
+  templateFooter.querySelector("#cantidadDeProductos").textContent =
     CantidadDeProductos;
   templateFooter.querySelector("#totalDeLaCompra").textContent =
     PrecioPorCantidad;
@@ -203,6 +213,7 @@ function pintarFooter() {
   });
 }
 
+// Funcionalidad de los botones para sumar-restar-eliminar productos
 const btnSumarYRestar = (e) => {
   if (e.target.classList.contains("btn-primary")) {
     const producto = cart[e.target.dataset.id];
@@ -232,3 +243,49 @@ const btnSumarYRestar = (e) => {
   }
   e.stopPropagation();
 };
+
+// Buscar productos
+document
+  .getElementById("js-buscarProducto")
+  .addEventListener("keyup", filtrarProductos);
+// Función para filtrar los productos mientras se tipea
+function filtrarProductos() {
+  $.getJSON("../json/productos.json", (data) => {
+    // console.log("Modo con jQuery:");
+    let dataDesdeJason = data;
+    // console.log(dataDesdeJason);
+    const buscarProductoValue = buscarProducto.value;
+
+    const filteredProducts = dataDesdeJason.filter((product) => {
+      const productNameLowerCase = product.name.toLowerCase();
+      const productMarcaLowerCase = product.marca.toLowerCase();
+      const productVarietalLowerCase = product.varietal.toLowerCase();
+      const productTipoLowerCase = product.tipo.toLowerCase();
+
+      const isFiltered =
+        productNameLowerCase.includes(buscarProductoValue.toLowerCase()) ||
+        productMarcaLowerCase.includes(buscarProductoValue.toLowerCase()) ||
+        productVarietalLowerCase.includes(buscarProductoValue.toLowerCase()) ||
+        productTipoLowerCase.includes(buscarProductoValue.toLowerCase());
+      return isFiltered;
+    });
+    renderCardsHtml(filteredProducts, contenedorCards);
+  });
+}
+
+// Filtra productos productos por VINOS-ESPUMANTES-DESTILADOS
+function filtroPorTipo(fil) {
+  $.getJSON("../json/productos.json", (data) => {
+    let dataDesdeJason = data;
+    // console.log(fil);
+    const filteredProducts = dataDesdeJason.filter((product) => {
+      const productNameLowerCase = product.filtro;
+      // console.log(productNameLowerCase);
+      console.log(fil.textContent);
+      const FiltroProducto = productNameLowerCase.includes(fil);
+      // console.log(FiltroProducto);
+      return FiltroProducto;
+    });
+    renderCardsHtml(filteredProducts, contenedorCards);
+  });
+}

@@ -7974,7 +7974,7 @@ body {
       flex-direction: column-reverse;
       align-items: center; }
       .contenedorcards .cards .nombreyprecio .tipodevino {
-        font-size: 14px;
+        font-size: 12px;
         color: white; }
       .contenedorcards .cards .nombreyprecio .fondo {
         font-family: "Cinzel", serif;
@@ -8271,7 +8271,7 @@ body {
       flex-direction: column-reverse;
       align-items: center; }
       .contenedorcards .cards .nombreyprecio .tipodevino {
-        font-size: 14px;
+        font-size: 12px;
         color: white; }
       .contenedorcards .cards .nombreyprecio .fondo {
         font-family: "Cinzel", serif;
@@ -8375,26 +8375,35 @@ body {
   .barraLateral .scrollarea {
     overflow-y: auto; }
 
-.AddToCartModal img {
+.AddToCartModal {
+  --bs-gutter-x: 0; }
+
+.footerCard {
+  font-family: "Roboto", sans-serif; }
+
+.modal-body {
+  padding: 0; }
+
+img {
   height: 150px; }
 
-.AddToCartModal .titulo {
+.titulo {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly; }
 
-.AddToCartModal .btn-primary,
-.AddToCartModal .btn-secondary,
-.AddToCartModal .btn-danger {
+.btn-primary,
+.btn-secondary,
+.btn-danger {
   font-size: 16px;
   font-weight: bold; }
 
-.AddToCartModal .marcaProducto {
+.marcaProducto {
   font-weight: bold;
   font-size: 18px;
   text-transform: uppercase; }
 
-.AddToCartModal .cantidadProductos {
+.cantidadProductos {
   display: flex;
   height: 40px;
   align-items: center;
@@ -8403,7 +8412,7 @@ body {
 
 .footer {
   padding-top: 1rem;
-  background-color: #1d1712;
+  background-color: #192537;
   padding-bottom: 2rem;
   color: #fff; }
   .footer a {

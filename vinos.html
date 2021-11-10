@@ -27,7 +27,7 @@
 
 
   <template id="js-templateCart">
-    <div class="row border-bottom AddToCartModal">
+    <div class="row pt-1 border-top AddToCartModal ">
       <div class="col-3 productoAgregado text-center ">
         <img id="imgProductoCart" src="/imagenes/vinos/vino-cabernet-nicasia.jpg" alt="" srcset="" class="mx-auto">
       </div>
@@ -61,20 +61,20 @@
 
 
   <template id="js-templateFooter">
-
-    <h5 class="modal-title fw-bold" id="staticBackdropLabel">Total de la compra: <span id="totalDeLaCompra"></span>
-      <p id="cantidadDeProductos"></p>
+    <h5 class=" footerCard ms-2 pt-2 border-top">Cantidad de Productos: <span id="cantidadDeProductos"
+        class="fw-bold">17</span>
+      <span class="fw-bold">Botellas</span>
     </h5>
-    <div class="modal-footer">
+    <h5 class="modal-title  footerCard ms-2 pb-2 "><span class="">Total de la
+        compra:</span><span class="fw-bold p-1">$</span><span class=" fw-bold" id="totalDeLaCompra"></span>
+    </h5>
 
-      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>
-      <button type="button" id="js-EmptyCart" class="btn btn-primary">Vaciar Carro</button>
+    <div class="modal-footer bg-light">
+
+      <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Seguir comprando</button>
+      <button type="button" id="js-EmptyCart" class="btn btn-outline-secondary">Vaciar Carro</button>
+      <button type="button" class="btn btn-outline-primary" id="js-buyCart">Comprar</button>
   </template>
-
-
-
-
-
 
   <div class="contenedor__ventaProductos ">
     <header class="header my-0 mx-0" id="header">
@@ -114,10 +114,6 @@
             Willy</span>
         </a>
         <div class="d-md-inline-flex order-md-2 hover pe-2 pe-sm-4">
-
-          <a class="navbar-brand d-none d-md-block" href="login.html">
-            <i class="bi-person-circle icono px-1"></i></span>
-          </a>
           <a class="navbar-brand" data-bs-toggle="modal" data-bs-target="#js-carro">
             <i class="bi bi-cart3 icono px-1"></i></span>
           </a>
@@ -128,16 +124,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item  ">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="#" id="js-todosLosProductos">Todo</a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="vinos.html" id="js-filtrarVinos">Vinos</a>
+              <a class="nav-link" href="#" id="js-filtrarVinos">Vinos<span class="d-none"></span></a>
             </li>
             <li class="nav-item ">
-              <a class="nav-link" href="espumantes.html" id="js-filtrarEspumantes">Espumantes</a>
+              <a class="nav-link" href="#" id="js-filtrarEspumantes">Espumantes</a>
             </li>
             <li class="nav-item ">
-              <a class=" nav-link" href="destilados.html" id="js-filtrarDestilados">Destilados</a>
+              <a class=" nav-link" href="#" id="js-filtrarDestilados">Destilados</a>
             </li>
             <li class="nav-item ">
 
@@ -155,8 +151,8 @@
     <div class="modal " id="js-carro" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
+          <div class="modal-header bg-light border-0">
+            <h5 class="modal-title ">Su Carro de Compras</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body" id="js-itemsCart">

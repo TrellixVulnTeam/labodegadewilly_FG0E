@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "filtro": "Vinos",
     "name": "Vino",
     "marca": "Los Alamos",
     "img": "imagenes/vinos/vino-malbec-alamos.jpg",
@@ -11,6 +12,7 @@
   },
   {
     "id": 2,
+    "filtro": "Vinos",
     "name": "Vino",
     "marca": "Septima Obra",
     "img": "imagenes/vinos/vino-blanco-chardonnay-septimaobra.jpg",
@@ -21,6 +23,7 @@
   },
   {
     "id": 3,
+    "filtro": "Vinos",
     "name": "Vino",
     "marca": "La Linda",
     "img": "imagenes/vinos/vino-malbec-lalinda.jpg",
@@ -31,6 +34,7 @@
   },
   {
     "id": 4,
+    "filtro": "Vinos",
     "name": "Vino",
     "marca": "La Linda",
     "img": "imagenes/vinos/vino-rosado-lalinda.jpg",
@@ -41,6 +45,7 @@
   },
   {
     "id": 5,
+    "filtro": "Vinos",
     "name": "Vino",
     "marca": "Septima",
     "img": "imagenes/vinos/vino-blanco-suavignonblanc.jpg",
@@ -51,6 +56,7 @@
   },
   {
     "id": 6,
+    "filtro": "Vinos",
     "name": "Vino",
     "marca": "Uxmal",
     "img": "imagenes/vinos/vino-malbec-uxmal.jpg",
@@ -61,6 +67,7 @@
   },
   {
     "id": 7,
+    "filtro": "Vinos",
     "name": "Vino",
     "marca": "Trumpeter",
     "img": "imagenes/vinos/vino-rosado-trumpeter.jpg",
@@ -68,5 +75,192 @@
     "varietal": "Rose",
     "envase": "750ml",
     "precio": 715
+  },
+  {
+    "id": 8,
+    "filtro": "Espumantes",
+    "name": "Champagne",
+    "marca": "Maria Codorniu",
+    "img": "imagenes/espumantes/champagne-mariacodorniu-brutnature.png",
+    "tipo": "Brut",
+    "varietal": "Nature",
+    "envase": "750ml",
+    "precio": 816
+  },
+  {
+    "id": 9,
+    "filtro": "Espumantes",
+    "name": "Champagne",
+    "marca": "Maria Codorniu",
+    "img": "imagenes/espumantes/champagne-mariacodorniu-Champegnoise.jpg",
+    "tipo": "Brut",
+    "varietal": "Noise",
+    "envase": "750ml",
+    "precio": 760
+  },
+  {
+    "id": 10,
+    "filtro": "Espumantes",
+    "name": "Champagne",
+    "marca": "Maria Codorniu",
+    "img": "imagenes/espumantes/champagne-mariacodorniu-dulce.jpg",
+    "tipo": "Nature",
+    "varietal": "Dulce",
+    "envase": "750ml",
+    "precio": 760
+  },
+  {
+    "id": 11,
+    "filtro": "Espumantes",
+    "name": "Champagne",
+    "marca": "Mumm",
+    "img": "imagenes/espumantes/champagne-Mumm-Cuvee-Reserve-Extra-Brut.png",
+    "tipo": "Cuvee",
+    "varietal": "Reserve",
+    "envase": "750ml",
+    "precio": 970
+  },
+  {
+    "id": 12,
+    "filtro": "Espumantes",
+    "name": "Champagne",
+    "marca": "Mumm",
+    "img": "imagenes/espumantes/champagne-Mumm-Frances-Brut.jpg",
+    "tipo": "Brut",
+    "varietal": "Frances",
+    "envase": "750ml",
+    "precio": 1250
+  },
+  {
+    "id": 13,
+    "filtro": "Espumantes",
+    "name": "Champagne",
+    "marca": "Mumm",
+    "img": "imagenes/espumantes/champagne-Mumm-Leger-Spritz.jpg",
+    "tipo": "Leger",
+    "varietal": "Spritz",
+    "envase": "750ml",
+    "precio": 1350
+  },
+  {
+    "id": 14,
+    "filtro": "Espumantes",
+    "name": "Champagne",
+    "marca": "Salentein",
+    "img": "imagenes/espumantes/champagne-Salentein-Brut-Nature.png",
+    "tipo": "Brut",
+    "varietal": "Nature",
+    "envase": "750ml",
+    "precio": 970
+  },
+  {
+    "id": 15,
+    "filtro": "Espumantes",
+    "name": "Champagne",
+    "marca": "Salentein",
+    "img": "imagenes/espumantes/champagne-Salentein-Cuvee-Exceptionnelle.jpg",
+    "tipo": "Cuvee",
+    "varietal": "Exceptio.",
+    "envase": "750ml",
+    "precio": 990
+  },
+  {
+    "id": 16,
+    "filtro": "Espumantes",
+    "name": "Champagne",
+    "marca": "Salentein",
+    "img": "imagenes/espumantes/champagne-Salentein-Extra-Brut.png",
+    "tipo": "Ex-Brut",
+    "varietal": "Reserva",
+    "envase": "750ml",
+    "precio": 1250
+  },
+  {
+    "id": 17,
+    "filtro": "Destilados",
+    "name": "Gin",
+    "marca": "Heraclito",
+    "img": "imagenes/destilados/gin-heraclito-macedonio.jpg",
+    "tipo": "Macedonio",
+    "varietal": "London Dry",
+    "envase": "750ml",
+    "precio": 1450
+  },
+  {
+    "id": 18,
+    "name": "Licor",
+    "filtro": "Destilados",
+    "marca": "Wild Africa",
+    "img": "imagenes/destilados/licor-wild-africa-cream.jpg",
+    "tipo": "Cream",
+    "varietal": "Grad.Alc.17%",
+    "envase": "750ml",
+    "precio": 2150
+  },
+  {
+    "id": 19,
+    "name": "Whisky",
+    "filtro": "Destilados",
+    "marca": "Evan Williams",
+    "img": "imagenes/destilados/whisky-evanwilliams-honey.jpg",
+    "tipo": "S. Malt",
+    "varietal": "Grad.Alc.35%",
+    "envase": "750ml",
+    "precio": 5550
+  },
+  {
+    "id": 20,
+    "name": "Vino",
+    "filtro": "Vinos",
+    "marca": "Nicasia",
+    "img": "imagenes/vinos/vino-cabernet-nicasia.jpg",
+    "tipo": "Tinto",
+    "varietal": "Cabernet",
+    "envase": "750ml",
+    "precio": 478
+  },
+  {
+    "id": 21,
+    "filtro": "Vinos",
+    "name": "Vino",
+    "marca": "Trumpeter",
+    "img": "imagenes/vinos/vino-malbec-trumpeter.jpg",
+    "tipo": "Tinto",
+    "varietal": "Malbec",
+    "envase": "750ml",
+    "precio": 980
+  },
+  {
+    "id": 22,
+    "filtro": "Vinos",
+    "name": "Vino",
+    "marca": "Trumpeter",
+    "img": "imagenes/vinos/vino-malbec-trumpeter-reserva.jpg",
+    "tipo": "Tinto",
+    "varietal": "Malbec Reserva",
+    "envase": "750ml",
+    "precio": 1230
+  },
+  {
+    "id": 23,
+    "filtro": "Destilados",
+    "name": "Licor",
+    "marca": "Albany",
+    "img": "imagenes/destilados/licor-albanycream.jpg",
+    "tipo": "Cream",
+    "varietal": "Grad.Alc.17%",
+    "envase": "750ml",
+    "precio": 1350
+  },
+  {
+    "id": 24,
+    "filtro": "Destilados",
+    "name": "Licor",
+    "marca": "Tambo",
+    "img": "imagenes/destilados/licor-tambo.jpg",
+    "tipo": "Dulce de Leche",
+    "varietal": "Cream",
+    "envase": "750ml",
+    "precio": 1350
   }
 ]
