@@ -47,16 +47,18 @@ document.addEventListener("click", (e) => {
       renderCardsHtml(dataDesdeJason, contenedorCards);
     });
   }
-  if (e.target.matches("#js-buyCart")) {
-    console.log("Gracias Por su Compra");
-    finalizarCompra();
-  }
-  if (e.target.matches("#js-contenedorCards")) {
-    addToCart(e);
-  }
-  if (e.target.matches("#js-itemsCart")) {
-    btnSumarYRestar(e);
-  }
+  // if (e.target.matches("#js-buyCart")) {
+  //   console.log("Gracias Por su Compra");
+  //   finalizarCompra();
+  // }
+});
+
+contenedorCards.addEventListener("click", (e) => {
+  addToCart(e);
+});
+
+itemsCart.addEventListener("click", (e) => {
+  btnSumarYRestar(e);
 });
 
 const finalizarCompra = () => {
@@ -273,7 +275,7 @@ function filtrarProductos() {
   });
 }
 
-// Filtra productos productos por VINOS-ESPUMANTES-DESTILADOS
+// Filtra productos productos
 function filtroPorTipo(fil) {
   $.getJSON("../json/productos.json", (data) => {
     let dataDesdeJason = data;
