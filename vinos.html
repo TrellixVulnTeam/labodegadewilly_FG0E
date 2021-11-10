@@ -72,8 +72,8 @@
 
       <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Seguir comprando</button>
       <button type="button" id="js-EmptyCart" class="btn btn-outline-secondary">Vaciar Carro</button>
-      <button type="button" class="btn btn-outline-primary" data-bs-target="#finalizarCompra" data-bs-toggle="modal"
-        id="js-buyCart">Comprar</button>
+      <button type="button" class="btn btn-outline-success" data-toggle="modal" data-bs-target="#finalizarCompra"
+        data-bs-toggle="modal" data-bs-dismiss="modal">Comprar</button>
   </template>
 
   <div class="contenedor__ventaProductos ">
@@ -135,10 +135,11 @@
             <li class="nav-item ">
               <a class=" nav-link" href="#" id="js-filtrarDestilados">Destilados</a>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item align-self-center ">
 
-              <input id="js-buscarProducto" class="form-control ms-sm-2  bg-dark text-light" type="search"
-                placeholder=" Buscar en todo el sitio..." aria-label="Search">
+              <input id="js-buscarProducto"
+                class="estiloplaceholder form-control form-control-sm ms-sm-2 bg-light text-primary" type="search"
+                placeholder=" Buscar en todo el sitio..." aria-label="  ">
               </span>
 
             </li>
@@ -148,11 +149,11 @@
 
     <!-- modal de Carrito -->
 
-    <div class="modal " id="js-carro" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal fade" id="js-carro" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header bg-light border-0">
-            <h5 class="modal-title ">Su Carro de Compras</h5>
+            <h5 class="modal-title fw-bolder" id="exampleModalToggleLabel">Su Carro de Compras</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body" id="js-itemsCart">
@@ -167,25 +168,31 @@
 
 
     </div>
+
     <!-- finalizar compra -->
-    <div class="modal" id="finalizarCompra" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">GRACIAS POR SU COMPRA</h5>
+    <div class="modal fade " id="finalizarCompra" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+      tabindex="-1">
+      <div class="modal-dialog ">
+        <div class="modal-content ">
+          <div class="modal-header bg-white">
+            <div>
+              <img src="imagenes/logo2.svg" alt="log" class="logofinalizarcompra">
+              <span class="navbar__titulo text-primary text-decoration-none ">La Bodega de Willy</span>
+            </div>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>Pronto Recibira su pedido/p>
+            <h5 class="text-primary text-center">Gracias por su compra</h5>
+            <h5 class="text-primary text-center">Pronto Recibira su pedido</h5>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+
+            <button type="button" class="btn btn-primary cierretotal" id="CierreCompra"
+              data-bs-dismiss="modal">Finalizar</button>
           </div>
         </div>
       </div>
     </div>
-
 
     <section id="barraLateral">
 
@@ -196,11 +203,21 @@
         <img src="imagenes/publicidad/vinos/vinos-2.jpg" class="img-fluid " alt="Publicidad Bodega Trumpeter">
       </div>
       <div class="mb-1 me-1 ms-1 d-none d-sm-flex">
-        <img src="imagenes/publicidad/vinos/vinos-4.jpg" class="img-fluid " alt="Publicidad Vinos Nicasia">
+        <img src="imagenes/publicidad/espumantes/espumantes-6.jpg" class="img-fluid " alt="Publicidad Vinos Nicasia">
       </div>
       <div class="mb-1 me-1 ms-1 d-none d-sm-flex">
-        <img src="imagenes/publicidad/vinos/vinos-5.jpg" class="img-fluid d-xxl-none" alt="Publicidad Vinos Nicasia">
+        <img src="imagenes/publicidad/espumantes/espumantes-2.jpg" class="img-fluid d-xxl-none"
+          alt="Publicidad Vinos Nicasia">
       </div>
+      <div class="mb-1 me-1 ms-1 d-none d-sm-flex">
+        <img src="imagenes/publicidad/destilados/destilados-5.jpg" class="img-fluid d-xxl-none"
+          alt="Publicidad Vinos Nicasia">
+      </div>
+      <div class="mb-1 me-1 ms-1 d-none d-sm-flex ">
+        <img src="imagenes/publicidad/destilados/destilados-3.jpg" class="img-fluid d-xxl-none"
+          alt="Publicidad Vinos Nicasia">
+      </div>
+
     </section>
 
     <section id="galeriaProductos" class="contenedorflex mt-1 mb-1">
@@ -232,10 +249,7 @@
             <a href="" class="" data-bs-toggle="modal" data-bs-target="#politicas">POLITICA DE PRIVACIDAD</a>
 
           </div>
-          <div class="col-12 col-sm-3 ">
-            <a href="contacto.html">FORMULARIO DE CONTACTO</a>
 
-          </div>
         </div>
         <div class="row justify-content-center mt-3">
           <div class="col-auto ">

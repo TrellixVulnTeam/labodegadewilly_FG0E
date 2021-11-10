@@ -7645,6 +7645,9 @@ body {
   .navbar .nav-item {
     font-size: 1rem; } }
 
+.estiloplaceholder::placeholder {
+  color: #192537; }
+
 .slider {
   grid-area: slider; }
   .slider .carousel-item {
@@ -8377,6 +8380,15 @@ body {
 
 .AddToCartModal {
   --bs-gutter-x: 0; }
+
+.logofinalizarcompra {
+  height: 25px; }
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
 
 .footerCard {
   font-family: "Roboto", sans-serif; }

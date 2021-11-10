@@ -1,4 +1,5 @@
 //Traigo Los elementos que voy a utilizar en la programación desde el HTML
+
 const contenedorCards = document.getElementById("js-contenedorCards");
 const templateFooter = document.getElementById("js-templateFooter").content;
 const templateCart = document.getElementById("js-templateCart").content;
@@ -47,10 +48,9 @@ document.addEventListener("click", (e) => {
       renderCardsHtml(dataDesdeJason, contenedorCards);
     });
   }
-  // if (e.target.matches("#js-buyCart")) {
-  //   console.log("Gracias Por su Compra");
-  //   finalizarCompra();
-  // }
+  if (e.target.matches("#CierreCompra")) {
+    finalizarCompra();
+  }
 });
 
 contenedorCards.addEventListener("click", (e) => {
@@ -60,10 +60,6 @@ contenedorCards.addEventListener("click", (e) => {
 itemsCart.addEventListener("click", (e) => {
   btnSumarYRestar(e);
 });
-
-const finalizarCompra = () => {
-  alert(`Gracias Por su compra`);
-};
 
 //Template de Card que toma el JSON para crear cada tarjeta del producto
 const templateCardHTML = ({
@@ -88,7 +84,7 @@ const templateCardHTML = ({
           </div>
           <div class="contenido">
             <div>              
-                <a href="#" class="btn btn-secondary agregarAlCarro"><span class="d-none idProduct">${id}</span > Agregar  </a>
+                <a href="#" class="btn fw-bold pt-0 pb-0 ps-4 pe-4 btn-outline-secondary agregarAlCarro"><span class="d-none idProduct">${id}</span > Agregar  </a>
             </div>  
           </div>
         </div>`;
@@ -111,7 +107,6 @@ const renderCardsHtml = (products, container) => {
 // Agrego los productos seleccionados al carrito
 let addToCart = (e) => {
   if (e.target.classList.contains("agregarAlCarro")) {
-    console.log(e);
     setCart(e.target.closest(".cards"));
   }
   e.stopPropagation();
@@ -291,3 +286,11 @@ function filtroPorTipo(fil) {
     renderCardsHtml(filteredProducts, contenedorCards);
   });
 }
+
+// Finalizar Compra
+const finalizarCompra = () => {
+  const AddedToCart = document.querySelector("#js-AddedToCart");
+  AddedToCart.textContent = 0;
+  cart = {};
+  printCart();
+};
